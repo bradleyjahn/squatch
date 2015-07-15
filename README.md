@@ -1,1 +1,1 @@
-# squatch
+# Welcome to Squatch
