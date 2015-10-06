@@ -1,0 +1,212 @@
+@import "squatch/mixins";
+@import "squatch/normalize";
+
+
+
+// --------------------------------------------------
+// Colors
+// --------------------------------------------------
+// these variable names can be changed to your color scheme
+$grey:		 			#2C3E50 !default;  
+$red:			 			#E74C3C !default;  
+$off-white:  		#ECF0F1 !default;
+$light-blue:		#3498DB !default;  
+$blue:  	 			#2980B9 !default;  
+
+// used throughout styles 
+$color-primary: 			$light-blue 						!default; 	
+$accent-primary:			$blue 									!default;
+$color-secondary: 		$red 										!default;
+$accent-secondary:		lighten($red, 10%) 			!default;
+//grayscale
+$base-gray:				#555 												!default;
+$light-gray:			lighten($base-gray, 20%)		!default;
+$lighter-gray:		lighten($base-gray, 40%)		!default;
+$dark-gray:				darken($base-gray, 20%)			!default;
+$darker-gray:			darken($base-gray, 40%)			!default;
+
+
+
+
+// --------------------------------------------------
+// Fonts
+// --------------------------------------------------
+$font-san-serif: 		'Roboto', Hevetica, Arial, san-serif !default;
+$font-serif:				'Roboto Slab', Georgia, 'Times New Roman', Times,  serif !default;
+$font-alt: 					'Roboto Condensed', Hevetica, Arial, san-serif !default;
+$font-size-mobile: 		14px !default; // smaller body font size on extra small screens
+$font-size-desktop:		16px !default; 
+$font-size-base: 			1em  !default; 
+// Add as many font-face rules as needed, (eot, eot?#iefix, woff, ttf, svg)
+//@include font-face('Style Name', '../fonts/file-name', 'san-serif', 'style', 'weight');
+
+
+
+// --------------------------------------------------
+// Responsive Grid & breakpoints
+// --------------------------------------------------
+$screen-xs: 		    		360px 	   		!default;
+$screen-xs-min: 		    $screen-xs 		!default;
+$screen-sm: 		    		480px					!default;
+$screen-sm-min: 		    $screen-sm		!default;
+$screen-md: 		    		768px					!default;
+$screen-md-min: 		    $screen-md 		!default;
+$screen-lg: 		    		992px					!default;
+$screen-lg-min: 		    $screen-lg 		!default;
+$screen-xl: 		    		1200px 				!default;
+$screen-xl-min: 		    $screen-xl 		!default;
+$screen-navbar: 		    $screen-md 		!default;
+
+$screen-xs-max: 		    ($screen-sm-min - 1)    !default;
+$screen-sm-max: 		    ($screen-md-min - 1)    !default;
+$screen-md-max: 		    ($screen-lg-min - 1)    !default;
+$screen-lg-max: 		    ($screen-xl-min - 1)    !default;
+$screen-navbar-max: 		($screen-navbar - 1)   !default;
+$gutter-width:					($font-size-base * 2)  !default;
+$content-max-width:			$screen-xl-min 		  	 !default;
+$grid-columns:					12 					  				 !default;
+//adds and alternate grid with more columns to allow more complex layouts,
+$grid-columns-ext:			15 					   				 !default; 
+$gutter-width-ext:			($font-size-base * 1)  !default;
+@import "squatch/grid";
+
+
+
+// --------------------------------------------------
+// Default Styles
+// --------------------------------------------------
+$font-family-base: 		$font-san-serif !default;
+$line-height-base: 		1.5 						!default;
+$font-weight-base: 		300 						!default;
+$text-color: 					#666 						!default;
+$body-bg: 						$off-white 			!default;
+$link-color: 					$light-blue 		!default;
+$link-hover-color: 		$blue 					!default;
+$hr-color: 						$text-color 		!default;
+@import "squatch/default-styles";
+
+
+
+// --------------------------------------------------
+// Type 
+// --------------------------------------------------
+$headings-font-family: 		$font-alt !default;
+$headings-font-weight: 		400 			!default;
+$headings-line-height: 		1.4 			!default;
+$headings-color: 					#333 			!default;
+$headings-small-color: 		#333 			!default;
+$base-line-height: 				1.5em			!default;
+
+$h1-font-size: 					4.25em	 			!default;
+$h1-line: 							0.352941176em	!default;
+$h1-lines: 							3						 	!default;
+$h1-line-height: $h1-line * $h1-lines !default;
+$h1-margin-top: 				2 * $h1-line  !default;
+$h1-margin-bottom: 			1 * $h1-line  !default;
+
+$h2-font-size: 					2.625em 			!default;
+$h2-line: 							0.571428571em !default;
+$h2-lines: 							2						  !default;
+$h2-line-height: $h2-line * $h2-lines !default;
+$h2-margin-top: 				2 * $h2-line  !default;
+$h2-margin-bottom: 			1 * $h2-line  !default;
+
+$h3-font-size: 					1.625em 			!default;
+$h3-line: 							0.923076923em !default;
+$h3-lines: 							2 						!default;
+$h3-line-height: $h3-line * $h3-lines !default;
+$h3-margin-top: 				1 * $h3-line  !default;
+$h3-margin-bottom:			1 * $h3-line  !default;
+
+$h4-font-size: 					1em					  !default;
+$h4-line: 							1.5em				  !default;
+$h4-lines: 							1						  !default;
+$h4-line-height: $h4-line * $h4-lines !default;
+$h4-margin-top: 				1 * $h4-line 	!default;
+$h4-margin-bottom: 			1 * $h4-line	!default;
+$blockquote-font-size: 	1.5em 				!default;
+$blockquote-color: 					#666 			!default;
+$blockquote-footer-color: 	#333		  !default; 
+@import "squatch/type";
+
+
+// --------------------------------------------------
+// Navs
+// --------------------------------------------------
+$nav-link-color:			$link-color			 		!default;
+$nav-link-bg:					none						 		!default;
+$nav-hover-color:			$link-hover-color 	!default;
+$nav-hover-bg:				none		 						!default;
+$nav-link-padding-v: 	0.25em							!default;
+$nav-link-padding-h:	0.5em								!default;
+@import "squatch/navs";
+
+
+
+// --------------------------------------------------
+// Navbar
+// --------------------------------------------------
+$navbar-color:						$off-white		 				!default;
+$navbar-bg:								$grey 								!default;
+// link styles
+$navbar-link-color:				$navbar-color			 		!default;
+$navbar-link-bg:					none		 							!default;
+//logo style
+$brand-font-family: 			$font-alt 						!default;
+$brand-font-weight: 			$font-weight-base 		!default;
+$brand-font-size:					$font-size-base 			!default;
+// navbar link styles
+$navbar-font-family: 			$font-alt 						!default;
+$navbar-font-weight: 			$font-weight-base			!default;
+$navbar-link-padding-v: 	1em										!default;
+$navbar-link-padding-h:		1em										!default;
+$carat-width:							0.25em									!default;
+// link hover color
+$navbar-hover-color:			#FFF	 								!default;
+$navbar-hover-bg:			  	$color-secondary			!default;
+// current page link color
+$navbar-active-color:			$navbar-hover-color		!default;
+$navbar-active-bg:				$navbar-hover-bg 			!default;
+// hamburger nav icon
+$navbar-toggle-color:			$navbar-link-color		!default;
+$navbar-toggle-bg:				$navbar-link-bg	 			!default;
+$navbar-toggle-border:		none			 						!default;
+@import "squatch/navbar";
+
+
+// --------------------------------------------------
+// Dropdown menu
+// --------------------------------------------------
+$dropdown-color:					$navbar-color	 					!default;
+$dropdown-bg:							$navbar-bg		 					!default;
+// dropdown link styles	
+$dropdown-link-color:			$navbar-link-color 			!default;
+$dropdown-link-bg:				$navbar-link-bg					!default;
+$dropdown-link-padding-v:	$navbar-link-padding-v	!default;
+$dropdown-link-padding-h:	$navbar-link-padding-h	!default;
+// dropdown hover color
+$dropdown-hover-color:		$navbar-hover-color			!default;
+$dropdown-hover-bg:				$navbar-hover-bg				!default;
+// drop down current page
+$dropdown-active-color:		$navbar-active-color		!default;
+$dropdown-active-bg:			$navbar-active-bg	 			!default;
+@import "squatch/dropdown";
+
+// --------------------------------------------------
+// Components
+// --------------------------------------------------
+$btn-color:						#FFF		 															!default;
+$btn-bg:							$color-primary 												!default;
+$btn-border:					1px solid	darken($btn-bg, 10%)				!default;
+$btn-hover-color:			#FFF		 															!default;
+$btn-hover-bg:				darken($btn-bg, 10%) 									!default;
+$btn-hover-border:		1px solid	darken($color-primary, 10%)	!default;
+$btn-padding-v:				0.5em	 																!default;
+$btn-padding-h:				1em 																	!default;
+$btn-border-radius:		3px																		!default;
+$btn-font-family:			$font-family-base 										!default;
+$btn-font-weight:			$headings-font-weight 								!default;
+@import "squatch/components";
+
+
+@import "squatch/theme";

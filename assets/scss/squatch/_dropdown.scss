@@ -1,0 +1,39 @@
+// --------------------------------------------------
+// Dropdown Menu 
+// --------------------------------------------------
+
+
+
+.dropdown-nav {
+	display: none;
+	.open > & {
+		display: block;
+	}
+	> li {
+		min-width: 12em;
+		 > a {
+			color: $dropdown-link-color;
+			background: $dropdown-link-bg;
+			padding: $dropdown-link-padding-v $dropdown-link-padding-h;
+			white-space: nowrap;
+			&:hover, &:focus {
+				color: $dropdown-hover-color;
+				background: $dropdown-hover-bg;
+			}
+		}	
+	}
+}
+	
+@media (min-width: $screen-navbar){
+	
+	.dropdown-nav {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 99;
+		padding: 0.5em 1em;
+		background: $dropdown-bg;
+	}
+} //min-width: $screen-navbar
+				
+	

@@ -1,0 +1,50 @@
+// --------------------------------------------------
+// Navs
+// --------------------------------------------------
+
+.nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	a {
+		display: block;
+		color: $nav-link-color;
+		background: $nav-link-bg;
+		padding: $nav-link-padding-v $nav-link-padding-h;
+		&:hover, &:focus {
+				color: $nav-hover-color;
+				background: $nav-hover-bg;
+				text-decoration: none;
+		}
+	}
+	
+	&.inline {
+		> li {
+			display: inline-block;
+		}
+	}
+	
+	&.justify {
+		> li {
+			text-align: center;
+			@media (min-width: $screen-navbar){
+				width: 1%;
+				display: table-cell;
+				> a {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}

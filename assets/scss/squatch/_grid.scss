@@ -1,0 +1,89 @@
+// --------------------------------------------------
+// Grid system
+// --------------------------------------------------
+
+
+// .row encloses the 
+
+.row {
+  @include row-default();
+  max-width: $content-max-width;
+  position: relative;
+  .row {
+  	@include row-flush(); //align nested rows
+  }
+  &.full-width {
+  	max-width: 100%;
+  }
+  &.pad {
+	  @include row-padded();
+  }
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+.column {
+	position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    max-width: 100%;
+    // Inner gutter via padding
+    padding-left:  ($gutter-width / 2);
+    padding-right: ($gutter-width / 2);
+    float: left;
+    width: 100%;
+    
+	&.center {
+		margin-left:  auto;
+		margin-right: auto;
+  }
+}
+
+
+// Create Grids for 12 column layout
+@include make-grid(xs, $grid-columns);
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm, $grid-columns);
+}
+@media (min-width: $screen-md-min) {
+  @include make-grid(md, $grid-columns);
+}
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg, $grid-columns);
+}
+@media (min-width: $screen-xl-min) {
+  @include make-grid(xl, $grid-columns);
+}
+
+.row.extended {
+	.row {
+  	@include row-flush($gutter-width-ext);
+  }
+  &.pad {
+	  @include row-padded($gutter-width-ext);
+  }
+	.column {
+		padding-left:  ($gutter-width-ext / 2);
+		padding-right: ($gutter-width-ext / 2);
+	}
+	// Create Grids for 15 column layout
+	@include make-grid(xs, $grid-columns-ext);
+	@media (min-width: $screen-sm-min) {
+	  @include make-grid(sm, $grid-columns-ext);
+	}
+	@media (min-width: $screen-md-min) {
+	  @include make-grid(md, $grid-columns-ext);
+	}
+	@media (min-width: $screen-lg-min) {
+	  @include make-grid(lg, $grid-columns-ext);
+	}
+	@media (min-width: $screen-xl-min) {
+	  @include make-grid(xl, $grid-columns-ext);
+	}
+}
+
+
+
+
