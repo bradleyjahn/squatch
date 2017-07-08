@@ -1,3 +1,4 @@
+@import "squatch/variables";
 @import "squatch/mixins";
 @import "squatch/normalize";
 
@@ -6,23 +7,23 @@
 // Colors
 // --------------------------------------------------
 // these variable names can be changed to your color scheme
-$grey:		 			#2C3E50 !default;
-$red:			 			#E74C3C !default;  
-$off-white:  		#ECF0F1 !default;
-$light-blue:		#3498DB !default;  
-$blue:  	 			#2980B9 !default;  
+//$grey:		 			#2C3E50;
+//$red:			 			#E74C3C;
+//$off-white:  		#ECF0F1;
+//$light-blue:		#3498DB;
+//$blue:  	 			#2980B9;
 
 // used throughout styles 
-$color-primary: 			$light-blue 						!default; 	
-$accent-primary:			$blue 									!default;
-$color-secondary: 		$red 										!default;
-$accent-secondary:		lighten($red, 10%) 			!default;
+//$color-primary: 			$light-blue;
+//$accent-primary:			$blue;
+//$color-secondary: 		$red;
+//$accent-secondary:		lighten($red, 10%) ;
 //grayscale
-$base-gray:				#555 												!default;
-$light-gray:			lighten($base-gray, 20%)		!default;
-$lighter-gray:		lighten($base-gray, 40%)		!default;
-$dark-gray:				darken($base-gray, 20%)			!default;
-$darker-gray:			darken($base-gray, 40%)			!default;
+//$base-gray:				#555;
+//$light-gray:			lighten($base-gray, 20%);
+//$lighter-gray:		lighten($base-gray, 40%);
+//$dark-gray:				darken($base-gray, 20%);
+//$darker-gray:			darken($base-gray, 40%);
 
 
 
@@ -30,12 +31,12 @@ $darker-gray:			darken($base-gray, 40%)			!default;
 // --------------------------------------------------
 // Fonts
 // --------------------------------------------------
-$font-san-serif: 		'Roboto', Hevetica, Arial, san-serif !default;
-$font-serif:				'Roboto Slab', Georgia, 'Times New Roman', Times,  serif !default;
-$font-alt: 					'Roboto Condensed', Hevetica, Arial, san-serif !default;
-$font-size-mobile: 		14px !default; // smaller body font size on extra small screens
-$font-size-desktop:		16px !default; 
-$font-size-base: 			1em  !default; 
+//$font-san-serif: 		'Roboto', Hevetica, Arial, san-serif;
+//$font-serif:				'Roboto Slab', Georgia, 'Times New Roman', Times,  serif;
+//$font-alt: 					'Roboto Condensed', Hevetica, Arial, san-serif;
+//$font-size-mobile: 		14px; // smaller body font size on extra small screens
+//$font-size-desktop:		16px;
+//$font-size-base: 			1em;
 // Add as many font-face rules as needed, (eot, eot?#iefix, woff, ttf, svg)
 //@include font-face('Style Name', '../fonts/file-name', 'san-serif', 'style', 'weight');
 
@@ -44,29 +45,29 @@ $font-size-base: 			1em  !default;
 // --------------------------------------------------
 // Responsive Grid & breakpoints
 // --------------------------------------------------
-$screen-xs: 		    		360px 	   		!default;
-$screen-xs-min: 		    $screen-xs 		!default;
-$screen-sm: 		    		480px					!default;
-$screen-sm-min: 		    $screen-sm		!default;
-$screen-md: 		    		768px					!default;
-$screen-md-min: 		    $screen-md 		!default;
-$screen-lg: 		    		992px					!default;
-$screen-lg-min: 		    $screen-lg 		!default;
-$screen-xl: 		    		1200px 				!default;
-$screen-xl-min: 		    $screen-xl 		!default;
-$screen-navbar: 		    $screen-md 		!default;
-
-$screen-xs-max: 		    ($screen-sm-min - 1)    !default;
-$screen-sm-max: 		    ($screen-md-min - 1)    !default;
-$screen-md-max: 		    ($screen-lg-min - 1)    !default;
-$screen-lg-max: 		    ($screen-xl-min - 1)    !default;
-$screen-navbar-max: 		($screen-navbar - 1)   !default;
-$gutter-width:					($font-size-base * 2)  !default;
-$content-max-width:			$screen-xl-min 		  	 !default;
-$grid-columns:					12 					  				 !default;
-//adds and alternate grid with more columns to allow more complex layouts,
-$grid-columns-ext:			15 					   				 !default; 
-$gutter-width-ext:			($font-size-base * 1)  !default;
+//$screen-xs: 		    		360px;
+//$screen-xs-min: 		    $screen-xs;
+//$screen-sm: 		    		480px;
+//$screen-sm-min: 		    $screen-sm;
+//$screen-md: 		    		768px;
+//$screen-md-min: 		    $screen-md;
+//$screen-lg: 		    		992px;
+//$screen-lg-min: 		    $screen-lg;
+//$screen-xl: 		    		1200px;
+//$screen-xl-min: 		    $screen-xl;
+//$screen-navbar: 		    $screen-md;
+//
+//$screen-xs-max: 		    ($screen-sm-min - 1);
+//$screen-sm-max: 		    ($screen-md-min - 1);
+//$screen-md-max: 		    ($screen-lg-min - 1);
+//$screen-lg-max: 		    ($screen-xl-min - 1);
+//$screen-navbar-max: 		($screen-navbar - 1);
+//$gutter-width:					($font-size-base * 2);
+//$content-max-width:			$screen-xl-min;
+//$grid-columns:					12;
+////adds and alternate grid with more columns to allow more complex layouts,
+//$grid-columns-ext:			15;
+//$gutter-width-ext:			($font-size-base * 1);
 @import "squatch/grid";
 
 
@@ -74,14 +75,14 @@ $gutter-width-ext:			($font-size-base * 1)  !default;
 // --------------------------------------------------
 // Default Styles
 // --------------------------------------------------
-$font-family-base: 		$font-san-serif !default;
-$line-height-base: 		1.5 						!default;
-$font-weight-base: 		300 						!default;
-$text-color: 					#666 						!default;
-$body-bg: 						$off-white 			!default;
-$link-color: 					$light-blue 		!default;
-$link-hover-color: 		$blue 					!default;
-$hr-color: 						$text-color 		!default;
+//$font-family-base: 		$font-san-serif;
+//$line-height-base: 		1.5;
+//$font-weight-base: 		300;
+//$text-color: 				#666;
+//$body-bg: 				$off-white;
+//$link-color: 			    $light-blue;
+//$link-hover-color: 		$blue;
+//$hr-color: 				$text-color;
 @import "squatch/default-styles";
 
 
@@ -89,55 +90,55 @@ $hr-color: 						$text-color 		!default;
 // --------------------------------------------------
 // Type 
 // --------------------------------------------------
-$headings-font-family: 		$font-alt !default;
-$headings-font-weight: 		400 			!default;
-$headings-line-height: 		1.4 			!default;
-$headings-color: 					#333 			!default;
-$headings-small-color: 		#333 			!default;
-$base-line-height: 				1.5em			!default;
-
-$h1-font-size: 					4.25em	 			!default;
-$h1-line: 							0.352941176em	!default;
-$h1-lines: 							3						 	!default;
-$h1-line-height: $h1-line * $h1-lines !default;
-$h1-margin-top: 				2 * $h1-line  !default;
-$h1-margin-bottom: 			1 * $h1-line  !default;
-
-$h2-font-size: 					2.625em 			!default;
-$h2-line: 							0.571428571em !default;
-$h2-lines: 							2						  !default;
-$h2-line-height: $h2-line * $h2-lines !default;
-$h2-margin-top: 				2 * $h2-line  !default;
-$h2-margin-bottom: 			1 * $h2-line  !default;
-
-$h3-font-size: 					1.625em 			!default;
-$h3-line: 							0.923076923em !default;
-$h3-lines: 							2 						!default;
-$h3-line-height: $h3-line * $h3-lines !default;
-$h3-margin-top: 				1 * $h3-line  !default;
-$h3-margin-bottom:			1 * $h3-line  !default;
-
-$h4-font-size: 					1em					  !default;
-$h4-line: 							1.5em				  !default;
-$h4-lines: 							1						  !default;
-$h4-line-height: $h4-line * $h4-lines !default;
-$h4-margin-top: 				1 * $h4-line 	!default;
-$h4-margin-bottom: 			1 * $h4-line	!default;
-$blockquote-font-size: 	1.5em 				!default;
-$blockquote-color: 					#666 			!default;
-$blockquote-footer-color: 	#333		  !default; 
+//$headings-font-family: 		$font-alt;
+//$headings-font-weight: 		400;
+//$headings-line-height: 		1.4;
+//$headings-color: 				#333;
+//$headings-small-color: 		#333;
+//$base-line-height: 			1.5em;
+//
+//$h1-font-size: 			    4.25em;
+//$h1-line: 					0.352941176em;
+//$h1-lines: 					3;
+//$h1-line-height: $h1-line * $h1-lines;
+//$h1-margin-top: 				2 * $h1-line;
+//$h1-margin-bottom: 			1 * $h1-line;
+//
+//$h2-font-size: 					2.625em;
+//$h2-line: 						0.571428571em;
+//$h2-lines: 						2;
+//$h2-line-height: $h2-line * $h2-lines;
+//$h2-margin-top: 				2 * $h2-line;
+//$h2-margin-bottom: 			1 * $h2-line;
+//
+//$h3-font-size: 					1.625em;
+//$h3-line: 					    0.923076923em;
+//$h3-lines: 						2;
+//$h3-line-height: $h3-line * $h3-lines;
+//$h3-margin-top: 				1 * $h3-line;
+//$h3-margin-bottom:			1 * $h3-line;
+//
+//$h4-font-size: 					1em;
+//$h4-line: 						1.5em;
+//$h4-lines: 					    1;
+//$h4-line-height: $h4-line * $h4-lines;
+//$h4-margin-top: 				1 * $h4-line;
+//$h4-margin-bottom: 			1 * $h4-line;
+//$blockquote-font-size: 	1.5em;
+//$blockquote-color: 					#666;
+//$blockquote-footer-color: 	#333;
 @import "squatch/type";
 
 
 // --------------------------------------------------
 // Navs
 // --------------------------------------------------
-$nav-link-color:			$link-color			 		!default;
-$nav-link-bg:					none						 		!default;
-$nav-hover-color:			$link-hover-color 	!default;
-$nav-hover-bg:				none		 						!default;
-$nav-link-padding-v: 	0.25em							!default;
-$nav-link-padding-h:	0.5em								!default;
+//$nav-link-color:			$link-color;
+//$nav-link-bg:					none;
+//$nav-hover-color:			$link-hover-color;
+//$nav-hover-bg:				none;
+//$nav-link-padding-v: 	0.25em;
+//$nav-link-padding-h:	0.5em;
 @import "squatch/navs";
 
 
@@ -145,66 +146,66 @@ $nav-link-padding-h:	0.5em								!default;
 // --------------------------------------------------
 // Navbar
 // --------------------------------------------------
-$navbar-color:						$off-white		 				!default;
-$navbar-bg:								$grey 								!default;
-// link styles
-$navbar-link-color:				$navbar-color			 		!default;
-$navbar-link-bg:					none		 							!default;
-//logo style
-$brand-font-family: 			$font-alt 						!default;
-$brand-font-weight: 			$font-weight-base 		!default;
-$brand-font-size:					$font-size-base 			!default;
-// navbar link styles
-$navbar-font-family: 			$font-alt 						!default;
-$navbar-font-weight: 			$font-weight-base			!default;
-$navbar-link-padding-v: 	1em										!default;
-$navbar-link-padding-h:		1em										!default;
-$carat-width:							0.25em									!default;
-// link hover color
-$navbar-hover-color:			#FFF	 								!default;
-$navbar-hover-bg:			  	$color-secondary			!default;
-// current page link color
-$navbar-active-color:			$navbar-hover-color		!default;
-$navbar-active-bg:				$navbar-hover-bg 			!default;
-// hamburger nav icon
-$navbar-toggle-color:			$navbar-link-color		!default;
-$navbar-toggle-bg:				$navbar-link-bg	 			!default;
-$navbar-toggle-border:		none			 						!default;
+//$navbar-color:						$off-white;
+//$navbar-bg:								$grey;
+//// link styles
+//$navbar-link-color:				$navbar-color;
+//$navbar-link-bg:					none;
+////logo style
+//$brand-font-family: 			$font-alt;
+//$brand-font-weight: 			$font-weight-base;
+//$brand-font-size:					$font-size-base;
+//// navbar link styles
+//$navbar-font-family: 			$font-alt;
+//$navbar-font-weight: 			$font-weight-base;
+//$navbar-link-padding-v: 	1em	;
+//$navbar-link-padding-h:		1em;
+//$carat-width:							0.25em;
+//// link hover color
+//$navbar-hover-color:			#FFF;
+//$navbar-hover-bg:			  	$color-secondary;
+//// current page link color
+//$navbar-active-color:			$navbar-hover-color;
+//$navbar-active-bg:				$navbar-hover-bg;
+//// hamburger nav icon
+//$navbar-toggle-color:			$navbar-link-color;
+//$navbar-toggle-bg:				$navbar-link-bg;
+//$navbar-toggle-border:		none;
 @import "squatch/navbar";
 
 
 // --------------------------------------------------
 // Dropdown menu
 // --------------------------------------------------
-$dropdown-color:					$navbar-color	 					!default;
-$dropdown-bg:							$navbar-bg		 					!default;
-// dropdown link styles	
-$dropdown-link-color:			$navbar-link-color 			!default;
-$dropdown-link-bg:				$navbar-link-bg					!default;
-$dropdown-link-padding-v:	$navbar-link-padding-v	!default;
-$dropdown-link-padding-h:	$navbar-link-padding-h	!default;
-// dropdown hover color
-$dropdown-hover-color:		$navbar-hover-color			!default;
-$dropdown-hover-bg:				$navbar-hover-bg				!default;
-// drop down current page
-$dropdown-active-color:		$navbar-active-color		!default;
-$dropdown-active-bg:			$navbar-active-bg	 			!default;
+//$dropdown-color:					$navbar-color;
+//$dropdown-bg:							$navbar-bg;
+//// dropdown link styles
+//$dropdown-link-color:			$navbar-link-color;
+//$dropdown-link-bg:				$navbar-link-bg;
+//$dropdown-link-padding-v:	$navbar-link-padding-v;
+//$dropdown-link-padding-h:	$navbar-link-padding-h;
+//// dropdown hover color
+//$dropdown-hover-color:		$navbar-hover-color;
+//$dropdown-hover-bg:				$navbar-hover-bg;
+//// drop down current page
+//$dropdown-active-color:		$navbar-active-color;
+//$dropdown-active-bg:			$navbar-active-bg;
 @import "squatch/dropdown";
 
 // --------------------------------------------------
 // Components
 // --------------------------------------------------
-$btn-color:						#FFF		 															!default;
-$btn-bg:							$color-primary 												!default;
-$btn-border:					1px solid	darken($btn-bg, 10%)				!default;
-$btn-hover-color:			#FFF		 															!default;
-$btn-hover-bg:				darken($btn-bg, 10%) 									!default;
-$btn-hover-border:		1px solid	darken($color-primary, 10%)	!default;
-$btn-padding-v:				0.5em	 																!default;
-$btn-padding-h:				1em 																	!default;
-$btn-border-radius:		3px																		!default;
-$btn-font-family:			$font-family-base 										!default;
-$btn-font-weight:			$headings-font-weight 								!default;
+//$btn-color:						#FFF;
+//$btn-bg:							$color-primary;
+//$btn-border:					1px solid	darken($btn-bg, 10%);
+//$btn-hover-color:			#FFF;
+//$btn-hover-bg:				darken($btn-bg, 10%);
+//$btn-hover-border:		1px solid	darken($color-primary, 10%);
+//$btn-padding-v:				0.5em;
+//$btn-padding-h:				1em;
+//$btn-border-radius:		3px;
+//$btn-font-family:			$font-family-base;
+//$btn-font-weight:			$headings-font-weight;
 @import "squatch/components";
 
 
