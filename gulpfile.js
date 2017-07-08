@@ -3,9 +3,16 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var sassdoc = require('sassdoc');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
 
 var input = './assets/scss/**/*.scss';
 var output = './src/css';
+
+var jsFiles = 'assets/js/**/*.js',
+    jsDest = './src/js';
+
 
 var sassOptions = {
     errLogToConsole: true,
@@ -33,6 +40,16 @@ gulp.task('sassdoc', function () {
         .resume();
 });
 
+
+gulp.task('scripts', function() {
+    return gulp.src(jsFiles)
+        .pipe(concat('squatch.js'))
+        .pipe(gulp.dest(jsDest))
+        .pipe(rename('squatch.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(jsDest));
+});
+
 gulp.task('watch', function() {
     return gulp
     // Watch the input folder for change,
@@ -45,7 +62,7 @@ gulp.task('watch', function() {
         });
 });
 
-gulp.task('default', ['sass', 'watch' /*, possible other tasks... */]);
+gulp.task('default', ['sass', 'watch', 'scripts'/*, possible other tasks... */]);
 
 gulp.task('prod', ['sassdoc'], function () {
     return gulp
