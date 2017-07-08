@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var sassdoc = require('sassdoc');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
@@ -30,16 +29,12 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.write())
         .pipe(autoprefixer())
         // Write the resulting CSS in the output folder
+        .pipe(gulp.dest(output))
+        .pipe(rename('squatch.min.css'))
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(autoprefixer())
         .pipe(gulp.dest(output));
 });
-
-gulp.task('sassdoc', function () {
-    return gulp
-        .src(input)
-        .pipe(sassdoc())
-        .resume();
-});
-
 
 gulp.task('scripts', function() {
     return gulp.src(jsFiles)
@@ -64,10 +59,3 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass', 'watch', 'scripts'/*, possible other tasks... */]);
 
-gulp.task('prod', ['sassdoc'], function () {
-    return gulp
-        .src(input)
-        .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(autoprefixer(autoprefixerOptions))
-        .pipe(gulp.dest(output));
-});

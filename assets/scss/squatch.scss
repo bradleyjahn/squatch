@@ -2,7 +2,6 @@
 @import "squatch/mixins";
 @import "squatch/normalize";
 
-
 // --------------------------------------------------
 // Colors
 // --------------------------------------------------
@@ -148,26 +147,26 @@
 // --------------------------------------------------
 //$navbar-color:						$off-white;
 //$navbar-bg:								$grey;
-//// link styles
+// link styles
 //$navbar-link-color:				$navbar-color;
 //$navbar-link-bg:					none;
-////logo style
+//logo style
 //$brand-font-family: 			$font-alt;
 //$brand-font-weight: 			$font-weight-base;
 //$brand-font-size:					$font-size-base;
-//// navbar link styles
+// navbar link styles
 //$navbar-font-family: 			$font-alt;
 //$navbar-font-weight: 			$font-weight-base;
 //$navbar-link-padding-v: 	1em	;
 //$navbar-link-padding-h:		1em;
 //$carat-width:							0.25em;
-//// link hover color
+// link hover color
 //$navbar-hover-color:			#FFF;
 //$navbar-hover-bg:			  	$color-secondary;
-//// current page link color
+// current page link color
 //$navbar-active-color:			$navbar-hover-color;
 //$navbar-active-bg:				$navbar-hover-bg;
-//// hamburger nav icon
+// hamburger nav icon
 //$navbar-toggle-color:			$navbar-link-color;
 //$navbar-toggle-bg:				$navbar-link-bg;
 //$navbar-toggle-border:		none;
@@ -179,15 +178,15 @@
 // --------------------------------------------------
 //$dropdown-color:					$navbar-color;
 //$dropdown-bg:							$navbar-bg;
-//// dropdown link styles
+// dropdown link styles
 //$dropdown-link-color:			$navbar-link-color;
 //$dropdown-link-bg:				$navbar-link-bg;
 //$dropdown-link-padding-v:	$navbar-link-padding-v;
 //$dropdown-link-padding-h:	$navbar-link-padding-h;
-//// dropdown hover color
+// dropdown hover color
 //$dropdown-hover-color:		$navbar-hover-color;
 //$dropdown-hover-bg:				$navbar-hover-bg;
-//// drop down current page
+// drop down current page
 //$dropdown-active-color:		$navbar-active-color;
 //$dropdown-active-bg:			$navbar-active-bg;
 @import "squatch/dropdown";

@@ -9,6 +9,5 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
-    "sassdoc": "^2.3.0"
   }
 }
