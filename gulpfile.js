@@ -5,7 +5,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var sassdoc = require('sassdoc');
 
 var input = './assets/scss/**/*.scss';
-var output = './assets/css';
+var output = './src/css';
 
 var sassOptions = {
     errLogToConsole: true,
