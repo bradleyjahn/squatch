@@ -30,7 +30,8 @@ gulp.task('sass', function () {
         .pipe(autoprefixer())
         // Write the resulting CSS in the output folder
         .pipe(gulp.dest(output))
-        .pipe(rename('squatch.min.css'))
+        .pipe(rename({suffix: ".min"}))
+        //write compressed file
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(autoprefixer())
         .pipe(gulp.dest(output));
@@ -46,15 +47,12 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch', function() {
-    return gulp
-    // Watch the input folder for change,
-    // and run `sass` task when something happens
-        .watch(input, ['sass'])
-        // When there is a change,
-        // log a message in the console
-        .on('change', function(event) {
+    gulp.watch(input, ['sass']).on('change', function(event) {
             console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
         });
+    gulp.watch(jsFiles, ['scripts']).on('change', function(event) {
+        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
 });
 
 gulp.task('default', ['sass', 'watch', 'scripts'/*, possible other tasks... */]);

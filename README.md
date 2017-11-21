@@ -7,3 +7,5 @@ clone and run
 
 then run
 `$ gulp watch`
+
+for examples visit http://squatch.co

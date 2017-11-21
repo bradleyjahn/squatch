@@ -127,7 +127,7 @@
 			background-color: $navbar-toggle-color;
 			position: absolute;
 			content: "";
-			@include transition(all 500ms ease-in-out);				
+			transition: all 500ms ease-in-out;
 		}
 		.toggle-bar:before {
 			 top: -0.4em;
@@ -138,14 +138,14 @@
 	
 	.open & {
 		 .toggle-bar:before {
-			 @include rotate(-45deg);
+			 transform: rotate(-45deg);
 			 top: 0;
 		 }
 		 .toggle-bar {
 			 background-color: transparent;
 		 }
 		 .toggle-bar:after {
-			 @include rotate(45deg);
+			 transform: rotate(45deg);
 			 top: 0;
 		 }		
 	}

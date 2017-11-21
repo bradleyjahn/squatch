@@ -4,5 +4,5 @@ $(document).ready(function(){
 	});
 	$('.dropdown-toggle').click(function(){
 		$(this).closest('li').toggleClass('open');
-	});
+	});//
 });

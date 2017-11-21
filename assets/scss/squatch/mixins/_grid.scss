@@ -27,7 +27,7 @@
 // create class for each size column
 @mixin make-grid($class,$columns) {
   @for $i from 1 through $columns {
-	.column.#{$class}-#{$i} {
+	.col.#{$class}-#{$i} {
       width: percentage(($i / $columns));
     }
   }

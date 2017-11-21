@@ -62,6 +62,14 @@ $grid-columns-ext:			15 					   				 !default;
 $gutter-width-ext:			($font-size-base * 1)  !default;
 
 
+$breakpoints: (
+    'xs' : '360px',
+    'sm' : '480px',
+    'md' : '768px',
+    'lg' : '992px',
+    'xl' : '1200px'
+);
+
 
 // --------------------------------------------------
 // Default Styles
