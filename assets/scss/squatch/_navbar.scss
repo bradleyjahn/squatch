@@ -93,7 +93,7 @@
 	display: block;
 }
 
-@media (min-width: $screen-navbar){
+@include navbar-min(){
 	.navbar .nav {
 		display: block;
 		float: right;
@@ -106,7 +106,7 @@
 	.navbar-toggle {
 		display: none;
 	}
-} //min-width: $screen-navbar
+} 
 
 .navbar-toggle {
 		background: $navbar-toggle-bg;

@@ -44,7 +44,7 @@
 
 // Create Grids for 12 column layout
 @each $breakpoint, $size in $breakpoints {
-	@media (min-width: #{$size}) {
+	@include min-width($breakpoint) {
 		@include make-grid(#{$breakpoint}, $grid-columns);
 	}
 }
@@ -60,22 +60,9 @@
 		padding-left:  ($gutter-width-ext / 2);
 		padding-right: ($gutter-width-ext / 2);
 	}
-	// Create Grids for 15 column layout
-	//@include make-grid(xs, $grid-columns-ext);
-	//@media (min-width: $screen-sm-min) {
-	//  @include make-grid(sm, $grid-columns-ext);
-	//}
-	//@media (min-width: $screen-md-min) {
-	//  @include make-grid(md, $grid-columns-ext);
-	//}
-	//@media (min-width: $screen-lg-min) {
-	//  @include make-grid(lg, $grid-columns-ext);
-	//}
-	//@media (min-width: $screen-xl-min) {
-	//  @include make-grid(xl, $grid-columns-ext);
-	//}
+	
 	@each $breakpoint, $size in $breakpoints {
-		@media (min-width: #{$size}) {
+		@include min-width($breakpoint) {
 			@include make-grid(#{$breakpoint}, $grid-columns-ext);
 		}
 	}
