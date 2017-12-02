@@ -8,9 +8,11 @@ var uglify = require('gulp-uglify');
 
 var input = './assets/scss/**/*.scss';
 var output = './src/css';
+var docsOutput = './docs/css';
 
 var jsFiles = 'assets/js/**/*.js',
     jsDest = './src/js';
+    jsDocsOutput = './docs/js';
 
 
 var sassOptions = {
@@ -34,7 +36,8 @@ gulp.task('sass', function () {
         //write compressed file
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(autoprefixer())
-        .pipe(gulp.dest(output));
+        .pipe(gulp.dest(output))
+        .pipe(gulp.dest(docsOutput));
 });
 
 gulp.task('scripts', function() {
@@ -43,7 +46,8 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest(jsDest))
         .pipe(rename('squatch.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(jsDest));
+        .pipe(gulp.dest(jsDest))
+        .pipe(gulp.dest(jsDocsOutput));
 });
 
 gulp.task('watch', function() {
