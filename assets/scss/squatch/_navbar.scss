@@ -93,7 +93,7 @@
 	display: block;
 }
 
-@include navbar-min(){
+@media #{navbar-min()}{
 	.navbar .nav {
 		display: block;
 		float: right;

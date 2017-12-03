@@ -24,7 +24,7 @@
 	}
 }
 	
-@include navbar-min(){
+@media #{navbar-min()}{
 	
 	.dropdown-nav {
 		position: absolute;

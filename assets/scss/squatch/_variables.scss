@@ -2,23 +2,34 @@
 // Colors
 // --------------------------------------------------
 // these variable names can be changed to your color scheme
-$grey:		 			#2C3E50 !default;
-$red:			 			#E74C3C !default;  
-$off-white:  		#ECF0F1 !default;
-$light-blue:		#3498DB !default;  
-$blue:  	 			#2980B9 !default;  
+
+$colors: (
+	grey: #2C3E50,
+	red: #E74C3C,
+	off-white: #ECF0F1,
+	light-blue: #3498DB,
+	blue: #2980B9
+	);
+
+
+
+
+
+ 
 
 // used throughout styles 
-$color-primary: 			$light-blue 						!default; 	
-$accent-primary:			$blue 									!default;
-$color-secondary: 		$red 										!default;
-$accent-secondary:		lighten($red, 10%) 			!default;
+$color-primary: 			color(light-blue) 			!default; 	
+$accent-primary:			color(blue)							!default;
+$color-secondary: 		color(red) 							!default;
+$accent-secondary:		lighten($color-secondary, 10%) 			!default;
 //grayscale
 $base-gray:				#555 												!default;
 $light-gray:			lighten($base-gray, 20%)		!default;
 $lighter-gray:		lighten($base-gray, 40%)		!default;
 $dark-gray:				darken($base-gray, 20%)			!default;
 $darker-gray:			darken($base-gray, 40%)			!default;
+
+
 
 
 
@@ -40,13 +51,14 @@ $font-size-base: 			1em  !default;
 // --------------------------------------------------
 $breakpoint-unit: 'px';
 $breakpoints: (
-    'xs' : 360,
-    'sm' : 480,
-    'md' : 768,
-    'lg' : 992,
-    'xl' : 1200
+    xs : 360,
+    sm : 480,
+    md : 768,
+    lg : 992,
+    xl : 1200
 );
 $breakpoint-navbar: 768 !default;
+
 
 
 $gutter-width:					($font-size-base * 2)  !default;
@@ -61,14 +73,14 @@ $gutter-width-ext:			($font-size-base * 1)  !default;
 // --------------------------------------------------
 // Default Styles
 // --------------------------------------------------
-$font-family-base: 		$font-san-serif !default;
-$line-height-base: 		1.5 						!default;
-$font-weight-base: 		300 						!default;
-$text-color: 					#666 						!default;
-$body-bg: 						$off-white 			!default;
-$link-color: 					$light-blue 		!default;
-$link-hover-color: 		$blue 					!default;
-$hr-color: 						$text-color 		!default;
+$font-family-base: 		$font-san-serif  !default;
+$line-height-base: 		1.5 						 !default;
+$font-weight-base: 		300 						 !default;
+$text-color: 					#666 						 !default;
+$body-bg: 						color(off-white) !default;
+$link-color: 					$color-primary 		 !default;
+$link-hover-color: 		$accent-primary 					 !default;
+$hr-color: 						$text-color 		 !default;
 
 
 
@@ -129,8 +141,8 @@ $nav-link-padding-h:	0.5em								!default;
 // --------------------------------------------------
 // Navbar
 // --------------------------------------------------
-$navbar-color:						$off-white		 				!default;
-$navbar-bg:								$grey 								!default;
+$navbar-color:						color(off-white)			!default;
+$navbar-bg:								color(grey)						!default;
 // link styles
 $navbar-link-color:				$navbar-color			 		!default;
 $navbar-link-bg:					none		 							!default;

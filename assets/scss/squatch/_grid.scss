@@ -44,7 +44,7 @@
 
 // Create Grids for 12 column layout
 @each $breakpoint, $size in $breakpoints {
-	@include min-width($breakpoint) {
+	@media #{min-width($breakpoint)} {
 		@include make-grid(#{$breakpoint}, $grid-columns);
 	}
 }
@@ -62,7 +62,7 @@
 	}
 	
 	@each $breakpoint, $size in $breakpoints {
-		@include min-width($breakpoint) {
+		@media #{min-width($breakpoint)} {
 			@include make-grid(#{$breakpoint}, $grid-columns-ext);
 		}
 	}

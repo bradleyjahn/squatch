@@ -37,7 +37,7 @@
 	&.justify {
 		> li {
 			text-align: center;
-			@include navbar-min(){
+			@media #{navbar-min()}{
 				width: 1%;
 				display: table-cell;
 				> a {
