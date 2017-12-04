@@ -1,0 +1,11 @@
+// flexbox mixins
+
+@mixin flex-grid($class,$columns) {
+  @for $i from 1 through $columns {
+	.col.#{$class}-#{$i} {
+      flex-basis: percentage(($i / $columns));
+      flex-grow: 0;
+    }
+  }
+}
+

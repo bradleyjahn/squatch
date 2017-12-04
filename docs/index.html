@@ -1,8 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="EN"> <!--<![endif]-->
+<html class="no-js" lang="EN">
   <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -15,12 +12,12 @@
       <script src="./js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" async></script>
   </head>
   <body>
-    <!--[if lt IE 8]>
+    <!--[if IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
 	  <header class="header-container">
-	    <div class="row pad">
+	    <div class="contained pad">
         <nav class="navbar">
           <a href="#" class="brand"><img src="./img/squatch.svg" alt="logo" />Squatch</h1></a>
 	        <button class="navbar-toggle">
@@ -43,8 +40,8 @@
 	    </div>
 	  </header>
 		<section class="hero-container">
-			<div class="row">
-				<div class="col sm-12 lg-5">
+			<div class="contained flex dir-row-lg">
+				<div class="col lg-5">
 					<h1>Squatch Framework</h1>
 					<p class="display3">The missing link in css frameworks. Everything you need, nothing more.</p>
 					<p class="display3"><a href="https://github.com/thesquatchman/squatch-sass/archive/master.zip" class="btn text-center" rel="nofollow" title="Download the contents of bradleyjahn/squatch as a zip file" aria-label="Download the contents of bradleyjahn/squatch as a zip file" >Download Squatch</a></p>
@@ -52,22 +49,22 @@
 			</div>
 		</section>
 	  <section class="main-container">
-      <div class="row">
+      <div class="contained flex">
         <article class="col">
           <header class="text-center">
             <h2>Why use Squatch?</h2>
             <p>Haven't <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and <a href="http://foundation.zurb.com/index.html" target="_blank">Foundation</a> pretty much got you covered? Yes, both these frameworks offer lots and lots of features, more than a small website needs.</p>
           </header>                    
-          <div class="row">
-          	<section class="col md-4">
+          <div class="contained flex dir-row-md">
+          	<section class="col">
           	  <h4>Lightweight</h4>
           	  <p>Squatch is designed to give you more freedom and flexibility without overloading you components that need to be customized.</p>
           	</section>
-          	<section class="col md-4">
+          	<section class="col">
           	  <h4>Quantity != Quality</h4>
           	  <p>Any responsive website needs certain basic components, navs, buttons, grids, etc. we focus on doing these things well.</p>
           	</section>
-          	<section class="col md-4">
+          	<section class="col">
           	  <h4>Be original</h4>
           	  <p>With our flexible and intuitive sass files, we put the design decisions back on the developers and designers where they belong.</p>
 						</section>
@@ -79,30 +76,30 @@
       </div> <!-- row -->
 	  </section> <!-- #main-container -->
 		<section class="placeholder-container">
-			<div class="row">
+			<div class="flex contained">
 				<div class="col text-center">
-					<h2>Multiple grid systems</h2>
-					<p>Go beyond the 12 col layout and create additional grids in the same document.</p>
+					<h2>Squatch is flexible!</h2>
+					<p>Flexbox grid system makes designing responsive layouts a breeze. Float based grids are no longer needed. Autoprefixer will take care of the differences in modern browsers. IE 9 and below are dead to us.</p>
 				</div>
 			</div>
-			<div class="row extended">
-				<div class="col sm-3"><img src="http://placehold.it/480x320" alt="" /></div>
-				<div class="col sm-3"><img src="http://placehold.it/480x320" alt="" /></div>
-				<div class="col sm-3"><img src="http://placehold.it/480x320" alt="" /></div>
-				<div class="col sm-3"><img src="http://placehold.it/480x320" alt="" /></div>
-				<div class="col sm-3"><img src="http://placehold.it/480x320" alt="" /></div>
-			</div>
-		</section>
-	  <footer class="footer-container">
-      <div class="row">
+      <div class="flex contained">
         <nav>
           <ul class="nav inline">
-            <li><a href="#">nav ul li a</a></li>
-            <li><a href="#">nav ul li a</a></li>
-            <li><a href="#">nav ul li a</a></li>
+            <li><a href="#" data-target="#flex-example" data-toggle="just-start">just-start</a></li>
+            <li><a href="#" data-target="#flex-example" data-toggle="just-end">just-end</a></li>
+            <li><a href="#" data-target="#flex-example" data-toggle="just-around">just-around</a></li>
           </ul>
         </nav>
       </div>
+			<div id="flex-example" class="flex contained dir-row demo-div">
+				<div class="col sm-2"><img src="http://placehold.it/480x320" alt="" /></div>
+				<div class="col sm-2"><img src="http://placehold.it/480x320" alt="" /></div>
+				<div class="col sm-2"><img src="http://placehold.it/480x320" alt="" /></div>
+				
+			</div>
+		</section>
+	  <footer class="footer-container">
+      
 	  </footer>
 	
 	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
