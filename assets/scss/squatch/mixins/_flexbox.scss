@@ -1,4 +1,62 @@
 // flexbox mixins
+@mixin flex-container($class) {
+	.flex#{$class} {
+    display: flex;
+  }
+	//flex-direction: row | row-reverse | column | column-reverse;
+  .dir-row#{$class} { flex-direction: row; @extend .flex#{$class}; }
+  .dir-col#{$class} { flex-direction: column; @extend .flex#{$class}; }
+  .rev-col#{$class} { flex-direction: column-reverse;  @extend .flex#{$class}; }
+  .rev-row#{$class} { flex-direction: row-reverse;  @extend .flex#{$class}; }
+
+  //flex-wrap: nowrap | wrap | wrap-reverse;
+  .nowrap#{$class} { flex-wrap: nowrap; @extend .flex#{$class}; }
+  .wrap#{$class} { flex-wrap: wrap; @extend .flex#{$class}; }
+  .wrap-rev#{$class} { flex-wrap: wrap-reverse; @extend .flex#{$class}; }
+
+  //justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+  .just-start#{$class} { justify-content: flex-start;  @extend .flex#{$class}; }
+  .just-end#{$class} { justify-content: flex-end;  @extend .flex#{$class}; }
+  .just-center#{$class} { justify-content: center;  @extend .flex#{$class}; }
+  .just-between#{$class} { justify-content: space-between;  @extend .flex#{$class}; }
+  .just-around#{$class} { justify-content: space-around;  @extend .flex#{$class}; }
+  .just-evenly#{$class} { justify-content: space-evenly;  @extend .flex#{$class}; }
+
+  //align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+  .content-start#{$class} { align-content: flex-start;  @extend .flex#{$class}; }
+  .content-end#{$class} { align-content: flex-end;  @extend .flex#{$class}; }
+  .content-center#{$class} { align-content: center;  @extend .flex#{$class}; }
+  .content-between#{$class} { align-content: space-between;  @extend .flex#{$class}; }
+  .content-around#{$class} { align-content: space-around;  @extend .flex#{$class}; }
+  .content-stretch#{$class} { align-content: stretch;  @extend .flex#{$class}; }
+
+  //align-items: flex-start | flex-end | center | baseline | stretch;
+  .items-start#{$class} { align-items: flex-start;  @extend .flex#{$class}; }
+  .items-end#{$class} { align-items: flex-end;  @extend .flex#{$class}; }
+  .items-center#{$class} { align-items: center;  @extend .flex#{$class}; }
+  .items-baseline#{$class} { align-items: baseline;  @extend .flex#{$class}; }
+  .items-stretch#{$class} { align-items: stretch;  @extend .flex#{$class}; }
+}
+
+@mixin flex-item($class) {
+	//flex-grow: <number>; /* default 0 */   flex-shrink: <number>; /* default 1 */
+  .grow#{$class} {flex-grow: 1;}
+  .nogrow#{$class} {flex-grow: 0;}
+  .shrink#{$class} {flex-shrink: 1;}
+  .noshrink#{$class} {flex-shrink: 0;}
+
+  //align-self: auto | flex-start | flex-end | center | baseline | stretch;
+  .self-start#{$class} { align-self: flex-start; }
+  .self-end#{$class} { align-self: flex-end; }
+  .self-center#{$class} { align-self: center; }
+  .self-baseline#{$class} { align-self: baseline; }
+  .self-stretch#{$class} { align-self: stretch; }
+
+  .first#{$class} { order: -1; }
+  .last#{$class} { order: 99; }
+
+}
+
 
 @mixin flex-grid($class,$columns) {
   @for $i from 1 through $columns {

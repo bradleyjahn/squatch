@@ -28,10 +28,9 @@
               <li><a href="https://github.com/thesquatchman/squatch-sass" target="_blank">Github</a></li>
               <li class="dropdown"><a href="#">Components</a><a class="dropdown-toggle"><i class="carat"></i></a>
               	<ul class="dropdown-nav">
-                	<li><a href="#css">CSS</a></li>
-                	<li><a href="#js">Javascript</a></li>
-                	<li class=""><a href="#grids">Grids</a></li>
+                	<li class=""><a href="#grids">Flexbox Grid</a></li>
                 	<li class=""><a href="#usingscss">Using SCSS</a></li>
+                  <li><a href="#js">Javascript</a></li>
                 	<li class=""><a href="#wp">Wordpress</a></li>
               	</ul>
               </li>
@@ -79,27 +78,40 @@
 			<div class="flex contained">
 				<div class="col text-center">
 					<h2>Squatch is flexible!</h2>
-					<p>Flexbox grid system makes designing responsive layouts a breeze. Float based grids are no longer needed. Autoprefixer will take care of the differences in modern browsers. IE 9 and below are dead to us.</p>
+					<p>Flexbox grid system makes designing responsive layouts a breeze. Float based grids are no longer needed. Autoprefixer will take care of the differences in modern browsers. IE 9 and below are dead to us. Go ahead and click the examples below to play with different layouts you can create just by adding classes to a containing element and child elements:</p>
 				</div>
 			</div>
-      <div class="flex contained">
-        <nav>
-          <ul class="nav inline">
-            <li><a href="#" data-target="#flex-example" data-toggle="just-start">just-start</a></li>
-            <li><a href="#" data-target="#flex-example" data-toggle="just-end">just-end</a></li>
-            <li><a href="#" data-target="#flex-example" data-toggle="just-around">just-around</a></li>
-          </ul>
-        </nav>
-      </div>
-			<div id="flex-example" class="flex contained dir-row demo-div">
-				<div class="col sm-2"><img src="http://placehold.it/480x320" alt="" /></div>
-				<div class="col sm-2"><img src="http://placehold.it/480x320" alt="" /></div>
-				<div class="col sm-2"><img src="http://placehold.it/480x320" alt="" /></div>
-				
-			</div>
+      <section class="demo-container contained flex dir-row-md">       
+          <nav class="col md-3">
+            <ul class="nav demo-nav">
+              <li class="h4">Flex Direction</li>
+              <li><a href="#" data-target="#flex-example" data-toggle="dir-row active">row</a></li>
+              <li><a href="#" data-target="#flex-example" data-toggle="dir-col">column</a></li>
+              <li><a href="#" data-target="#flex-example" data-toggle="rev-row">row-reverse</a></li>
+              <li><a href="#" data-target="#flex-example" data-toggle="rev-col">column-reverse</a></li>
+            </ul>
+            <ul class="nav demo-nav">  
+              <li class="h4">Justify Content</li>
+              <li><a href="#" data-target="#flex-example" data-toggle="just-start active">flex-start</a></li>
+              <li><a href="#" data-target="#flex-example" data-toggle="just-end">flex-end</a></li>
+              <li><a href="#" data-target="#flex-example" data-toggle="just-around">space-around</a></li>
+            </ul>
+          </nav>
+          <section class="col md-9">
+             
+              <div id="flex-example" class="demo flex dir-row flex-start">
+                <div class="col sm-2"><img src="http://placehold.it/480x320" alt="" /></div>
+                <div class="col sm-2"><img src="http://placehold.it/480x320" alt="" /></div>
+                <div class="col sm-2"><img src="http://placehold.it/480x320" alt="" /></div>
+              </div>
+             
+          </section>       
+      </section>
+      
+			
 		</section>
 	  <footer class="footer-container">
-      
+      <p class="legal contained text-center">copyright 2015-2017</p>
 	  </footer>
 	
 	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

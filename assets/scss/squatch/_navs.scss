@@ -26,6 +26,9 @@
 				background: $nav-hover-bg;
 				text-decoration: none;
 		}
+		&.active {
+			color: $nav-hover-color;
+		}
 	}
 	
 	&.inline {

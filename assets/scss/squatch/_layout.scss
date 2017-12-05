@@ -1,0 +1,12 @@
+// --------------------------------------------------
+// layout
+// --------------------------------------------------
+.contained {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $content-max-width;
+}
+.pad {
+  padding-left:  ($gutter-width / 2);
+  padding-right: ($gutter-width / 2);
+}

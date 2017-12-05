@@ -6,6 +6,6 @@ clone and run
 `$ npm install`
 
 then run
-`$ gulp watch`
+`$ gulp`
 
 for examples visit http://squatch.co
