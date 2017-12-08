@@ -1,15 +1,27 @@
 $(document).ready(function(){
-	$('.navbar-toggle').click(function(){
-		$(this).closest('.navbar').toggleClass('open');
-	});
-	$('.dropdown-toggle').click(function(){
-		$(this).closest('li').toggleClass('open');
-	});//
 	$( '[data-toggle]' ).click(function(e) {
 		e.preventDefault();
-		var classToToggle = $(this).attr('data-toggle'),
+		var clicked = $(this),
+				classToToggle = $(this).attr('data-toggle'),
 				elToToggle = $(this).attr('data-target');
-		$(this).toggleClass('active');		
-		$(elToToggle).toggleClass(classToToggle);	
+		$(this).toggleClass('active');
+		if (elToToggle) {		
+			$(elToToggle).toggleClass(classToToggle);	
+		} else {	
+			var exList = $(this).closest('ul'),
+					elToToggle = exList ? exList.attr('data-target') : false;
+			if (exList && elToToggle) {
+				var els = exList.find('[data-toggle]'),
+						classes = '';
+				els.each(function(i,e){
+					$(e).removeClass('active');
+					classes = classes + ' ' + $(e).attr('data-toggle');
+				})
+				clicked.addClass('active');
+				$(elToToggle).removeClass(classes).addClass(classToToggle);
+			} else {
+				$(this).closest('li').toggleClass(classToToggle);
+			}
+		}
 	});
 });

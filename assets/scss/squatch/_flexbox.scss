@@ -6,16 +6,18 @@
 @include flex-container('');
 @include flex-item('');
 
+
   
-.row {
-  flex-direction: column;
-  @extend .flex;
-} 
 .col {
+  width: 100%;
+} 
+.item {
   flex: 1 1 auto;
   padding-left:  ($gutter-width / 2);
   padding-right: ($gutter-width / 2);
 }
+@include flex-grid('', $grid-columns);
+
 // Create rules for each breakpoint and add suffix
 @each $breakpoint, $size in $breakpoints {
   @media #{min-width($breakpoint)} {

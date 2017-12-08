@@ -6,14 +6,59 @@
 		color: #fff;
 	}
 }
-.demo {
+
+[data-demo] {
 	position: relative;
-	padding-top: 2rem;
 	&::before {
 		content: attr(class);
 		position: absolute;
 		top: 0;
 		left: 1rem;
-
+		font-family: $font-alt;
+		opacity: 0.5;
 	}
 }
+
+
+.demo-nav {
+	li {
+		display: block;
+		padding: 0;
+		cursor: pointer;
+		span {
+			display: block;
+			padding: 0.5rem 1rem;
+			i {
+				opacity: 0.5;
+				float: right;
+				font-family: $font-alt;
+			}
+			&.active {
+				background: $accent-primary;
+				color: white;
+			}
+		}
+	}
+	&.inline {
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+#flex-example {
+	background: white;
+	padding: 3rem 1rem 1rem;
+	overflow: hidden;
+}
+
+#blue-box {
+	display: none;
+	border: 1px solid color(blue);
+	padding: 1rem;
+	margin: 1rem 0;
+	&.open {
+		display: block;
+	}
+}
+

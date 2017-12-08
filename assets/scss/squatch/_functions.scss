@@ -21,7 +21,7 @@
 
 @function max-width($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
-    @return (max-width: #{(map-get($breakpoints, $breakpoint) - 1)}#{$breakpoint-unit)}) 
+    @return (max-width: #{(map-get($breakpoints, $breakpoint) - 0.1)}#{$breakpoint-unit)}) 
   }
 
   @else {
@@ -34,5 +34,5 @@
     @return (min-width: #{$breakpoint-navbar}#{$breakpoint-unit}) 
 }
 @function navbar-max() { 
-    @return (max-width: #{($breakpoint-navbar - 1)}#{$breakpoint-unit})
+    @return (max-width: #{($breakpoint-navbar - 0.1)}#{$breakpoint-unit})
 }

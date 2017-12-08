@@ -1,0 +1,8 @@
+@each $breakpoint, $size in $breakpoints {
+  @media #{min-width($breakpoint)} {
+    .hidden-min-#{$breakpoint} { display: hidden !important; }
+  }
+  @media #{max-width($breakpoint)} {
+    .hidden-max-#{$breakpoint} { display: hidden !important; }
+  }
+}

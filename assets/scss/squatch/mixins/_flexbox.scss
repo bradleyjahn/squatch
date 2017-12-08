@@ -4,8 +4,8 @@
     display: flex;
   }
 	//flex-direction: row | row-reverse | column | column-reverse;
-  .dir-row#{$class} { flex-direction: row; @extend .flex#{$class}; }
-  .dir-col#{$class} { flex-direction: column; @extend .flex#{$class}; }
+  .row#{$class} { flex-direction: row; @extend .flex#{$class}; }
+  .col#{$class} { flex-direction: column; @extend .flex#{$class}; }
   .rev-col#{$class} { flex-direction: column-reverse;  @extend .flex#{$class}; }
   .rev-row#{$class} { flex-direction: row-reverse;  @extend .flex#{$class}; }
 
@@ -60,7 +60,7 @@
 
 @mixin flex-grid($class,$columns) {
   @for $i from 1 through $columns {
-	.col.#{$class}-#{$i} {
+	.item.#{$class}#{$i} {
       flex-basis: percentage(($i / $columns));
       flex-grow: 0;
     }
