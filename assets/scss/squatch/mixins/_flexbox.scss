@@ -6,8 +6,8 @@
 	//flex-direction: row | row-reverse | column | column-reverse;
   .row#{$class} { flex-direction: row; @extend .flex#{$class}; }
   .col#{$class} { flex-direction: column; @extend .flex#{$class}; }
-  .rev-col#{$class} { flex-direction: column-reverse;  @extend .flex#{$class}; }
-  .rev-row#{$class} { flex-direction: row-reverse;  @extend .flex#{$class}; }
+  .col-rev#{$class} { flex-direction: column-reverse;  @extend .flex#{$class}; }
+  .row-rev#{$class} { flex-direction: row-reverse;  @extend .flex#{$class}; }
 
   //flex-wrap: nowrap | wrap | wrap-reverse;
   .nowrap#{$class} { flex-wrap: nowrap; @extend .flex#{$class}; }
@@ -62,7 +62,7 @@
   @for $i from 1 through $columns {
 	.item.#{$class}#{$i} {
       flex-basis: percentage(($i / $columns));
-      flex-grow: 0;
+      //flex-grow: 0;
     }
   }
 }

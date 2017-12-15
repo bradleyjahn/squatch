@@ -6,7 +6,12 @@
 @include flex-container('');
 @include flex-item('');
 
-
+.gutters {
+  > .item {
+    border: ($gutter-width / 2) solid transparent;
+    background-clip: padding-box;
+  }
+}
   
 .col {
   width: 100%;

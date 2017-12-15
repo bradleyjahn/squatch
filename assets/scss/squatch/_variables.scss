@@ -10,7 +10,28 @@ $colors: (
 	light-blue: #3498DB,
 	blue: #2980B9
 	);
-
+$gray: (
+	20: #000000,
+	19: #080808,
+	18: #181818,
+	17: #282828,
+	16: #383838,
+	15: #404040,
+	14: #505050,
+	13: #585858,
+	12: #606060,
+	11: #707070,
+	10: #808080,
+	9: #909090,
+	8: #A0A0A0,
+	7: #B0B0B0,
+	6: #C0C0C0,
+	5: #D0D0D0,
+	3: #E0E0E0,
+	2: #E8E8E8,
+	1: #F8F8F8,
+	0: #FFFFFF
+);
 
 
 
@@ -88,7 +109,7 @@ $hr-color: 						$text-color 		 !default;
 $headings-font-family: 		$font-alt !default;
 $headings-font-weight: 		400 			!default;
 $headings-line-height: 		1.4 			!default;
-$headings-color: 					#333 			!default;
+$headings-color: 					inherit 			!default;
 $headings-small-color: 		#333 			!default;
 $base-line-height: 				1.5em			!default;
 

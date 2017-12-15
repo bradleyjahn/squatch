@@ -7,7 +7,7 @@
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
-			<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto+Condensed:300,300italic,400,400italic,700,700italic|Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto+Condensed:300,300italic,400,400italic,700,700italic|Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="./css/squatch.min.css">
       <script src="./js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" async></script>
   </head>
@@ -87,17 +87,19 @@
 			<div class="flex contained">
 				<div class="item">
 					<h2>Squatch is flexible!</h2>
-					<p>Flexbox grid system makes designing responsive layouts a breeze. Float based grids are no longer needed. Autoprefixer will take care of the differences in modern browsers. IE 9 and below are dead to us. Go ahead and click the examples below to play with different layouts you can create just by adding classes to a containing element and child elements: (* default value)</p>
+					<p>Flexbox grid system makes designing responsive layouts a breeze. Float based grids are no longer needed. Autoprefixer will take care of the differences in modern browsers. IE 9 and below are dead to us. Go ahead and click the examples below to play with different layouts you can create just by adding classes to a containing element and child elements: </p>
 				</div>
 			</div>
       <section class="demo-container contained col row-md">       
           <nav class="item md3">
+            <h3>Layout Classes</h3>
+            <p>Apply these flexbox properties to container elements by adding the class in gray: (* browser default)</p>
             <ul class="nav demo-nav" data-target="#flex-example">
               <li class="h4">Flex Direction</li>
-              <li><span href="#" data-toggle="row">row* <i>class: row</i></span></li>
+              <li><span class="active" href="#" data-toggle="row">row* <i>class: row</i></span></li>
               <li><span href="#" data-toggle="col">column <i>class: col</i></span></li>
-              <li><span href="#" data-toggle="rev-row">row-reverse <i>class: rev-row</i></span></li>
-              <li><span href="#" data-toggle="rev-col">column-reverse <i>class: rev-col</i></span></li>
+              <li><span href="#" data-toggle="row-rev">row-reverse <i>class: row-rev</i></span></li>
+              <li><span href="#" data-toggle="col-rev">column-reverse <i>class: col-rev</i></span></li>
             </ul>
             <ul class="nav demo-nav" data-target="#flex-example">
               <li class="h4">Flex Wrap</li>
@@ -105,11 +107,9 @@
               <li><span href="#" data-toggle="wrap">wrap <i>class: wrap</i></span></li>
               <li><span href="#" data-toggle="wrap-rev">wrap-reverse <i>class: wrap-rev</i></span></li>
             </ul>
-            <ul class="nav demo-nav" data-target="#flex-example">  
-              <li class="h4">Justify Content</li>
-              <li><span href="#" data-toggle="just-start">flex-start* <i>class: just-start</i></span></li>
-              <li><span href="#" data-toggle="just-end">flex-end <i>class: just-end</i></span></li>
-              <li><span href="#" data-toggle="just-around">space-around <i>class: just-around</i></span></li>
+            <ul class="nav demo-nav" >  
+              <li class="h4">Gutters</li>
+              <li><span href="#" data-target="#flex-example" data-toggle="gutters">Gutters <i>class: gutters</i></span></li>
             </ul>
           </nav>
           <section class="item noshrink-md md9">
@@ -144,7 +144,60 @@
               </div>             
           </section>       
       </section>
-      
+      <section class="demo-container contained col row-md">       
+          <nav class="item md3">
+            <h3>Alignment Classes</h3>
+            <p>These Flexbox properties affect the alignment of items that don't fill the whole space. They will behave differently dependening on the 'flex-direction'</p>
+            <ul class="nav demo-nav" data-target="#flex-example2">  
+              <li class="h4">Justify Content</li>
+              <li><span href="#" data-toggle="just-start">flex-start* <i>class: just-start</i></span></li>
+              <li><span href="#" data-toggle="just-end">flex-end <i>class: just-end</i></span></li>
+              <li><span href="#" data-toggle="just-center">center <i>class: just-center</i></span></li>
+              <li><span href="#" data-toggle="just-around">space-around <i>class: just-around</i></span></li>
+              <li><span href="#" data-toggle="just-between">space-between <i>class: just-between</i></span></li>
+              <li><span href="#" data-toggle="just-evenly">space-evenly <i>class: just-evenly</i></span></li>
+            </ul>
+            <ul class="nav demo-nav" data-target="#flex-example2">  
+              <li class="h4">Align Items</li>
+              <li><span href="#" data-toggle="items-start">flex-start <i>class: items-start</i></span></li>
+              <li><span href="#" data-toggle="items-end">flex-end <i>class: items-end</i></span></li>
+              <li><span href="#" data-toggle="items-center">center <i>class: items-center</i></span></li>
+              <li><span href="#" data-toggle="items-baseline">baseline <i>class: items-baseline</i></span></li>
+              <li><span href="#" data-toggle="items-stretch">stretch* <i>class: items-stretch</i></span></li>
+            </ul>
+            
+            <ul class="nav demo-nav" data-target="#flex-example">
+              <li class="h4">Flex Direction</li>
+              <li><span class="active" href="#" data-toggle="row">row* <i>class: row</i></span></li>
+              <li><span href="#" data-toggle="col">column <i>class: col</i></span></li>
+            </ul>
+          </nav>
+          <section class="item noshrink-md md9">
+              <div id="flex-example2" data-demo class="row">
+                
+              </div>             
+          </section>       
+      </section>
+      <section class="demo-container contained col row-md">       
+          <nav class="item md3">
+            <h3>Multi Line Alignment</h3>
+            <p>These Flexbox properties affect the alignment of wrapped items only.</p>
+            <ul class="nav demo-nav" data-target="#flex-example3">  
+              <li class="h4">Align Content</li>
+              <li><span href="#" data-toggle="content-start">flex-start <i>class: content-start</i></span></li>
+              <li><span href="#" data-toggle="content-end">flex-end <i>class: content-end</i></span></li>
+              <li><span href="#" data-toggle="content-center">center <i>class: content-center</i></span></li>
+              <li><span href="#" data-toggle="content-around">space-around <i>class: content-around</i></span></li>
+              <li><span href="#" data-toggle="content-between">space-between <i>class: content-between</i></span></li>
+              <li><span href="#" data-toggle="content-stretch">stretch* <i>class: content-stretch</i></span></li>
+            </ul>
+          </nav>
+          <section class="item noshrink-md md9">
+              <div id="flex-example3" data-demo class="row">
+                
+              </div>             
+          </section>  
+      </section>    
 			
 		</section>
     <section id="usingScss">
@@ -214,7 +267,7 @@
       <p class="legal contained text-center">copyright 2015-2017</p>
 	  </footer>
 	
-	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	  <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 	  <script src="./js/squatch.min.js"></script>
   </body>

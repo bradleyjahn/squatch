@@ -10,7 +10,7 @@
 [data-demo] {
 	position: relative;
 	&::before {
-		content: attr(class);
+		content: 'class="'attr(class)'"';
 		position: absolute;
 		top: 0;
 		left: 1rem;
@@ -46,10 +46,20 @@
 	}
 }
 
-#flex-example {
+#flex-example, #flex-example2, #flex-example3 {
 	background: white;
 	padding: 3rem 1rem 1rem;
+	margin: 1rem 0;
 	overflow: hidden;
+}
+#example1 {
+	background-color: gray(3);
+}
+#example2 {
+	background-color: gray(5);
+}
+#example3 {
+	background-color: gray(1);
 }
 
 #blue-box {

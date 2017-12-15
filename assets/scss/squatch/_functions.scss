@@ -7,6 +7,15 @@
   @return null;
 }
 
+@function gray($key) {
+  @if map-has-key($gray, $key) {
+    @return map-get($gray, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
 
 @function min-width($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
