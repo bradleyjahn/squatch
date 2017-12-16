@@ -21,7 +21,7 @@
   padding-left:  ($gutter-width / 2);
   padding-right: ($gutter-width / 2);
 }
-@include flex-grid('', $grid-columns);
+@include flex-grid('size', $grid-columns);
 
 // Create rules for each breakpoint and add suffix
 @each $breakpoint, $size in $breakpoints {

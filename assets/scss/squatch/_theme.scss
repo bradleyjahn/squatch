@@ -52,6 +52,23 @@
 	margin: 1rem 0;
 	overflow: hidden;
 }
+#flex-example2 {
+	min-height: 30rem;
+	&.col {
+		min-height: 60rem;
+	}
+	
+	
+}
+#flex-example3 {
+	height: 60rem;
+}
+.demo-box {
+		background-color: color(blue);
+		border: 5px solid white;
+		padding: 3rem;
+		color: white;
+	}
 #example1 {
 	background-color: gray(3);
 }

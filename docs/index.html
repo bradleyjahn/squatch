@@ -90,10 +90,14 @@
 					<p>Flexbox grid system makes designing responsive layouts a breeze. Float based grids are no longer needed. Autoprefixer will take care of the differences in modern browsers. IE 9 and below are dead to us. Go ahead and click the examples below to play with different layouts you can create just by adding classes to a containing element and child elements: </p>
 				</div>
 			</div>
-      <section class="demo-container contained col row-md">       
+      <div class="pad contained">
+        <h3>Layout Classes</h3>
+        <p>Apply these flexbox properties to container elements by adding the class in gray: (* browser default)</p>
+      </div>      
+      <section class="demo-container contained col row-md">  
+
           <nav class="item md3">
-            <h3>Layout Classes</h3>
-            <p>Apply these flexbox properties to container elements by adding the class in gray: (* browser default)</p>
+            
             <ul class="nav demo-nav" data-target="#flex-example">
               <li class="h4">Flex Direction</li>
               <li><span class="active" href="#" data-toggle="row">row* <i>class: row</i></span></li>
@@ -114,45 +118,50 @@
           </nav>
           <section class="item noshrink-md md9">
               <div id="flex-example" data-demo class="row">
-                <div id="example1" data-demo class="item md4">
-                  <h2>Lorem ipsum.</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit enim fuga doloremque neque natus voluptas aliquam omnis est necessitatibus repellat!</p>
+                <div id="example1" data-demo class="item size4">
+                  <h2>Item Width:</h2>
+                  <p>Item width can be set by adding a class '.size1 - .size12' to any element with an '.item' class. The width is set by 'flex-basis' rather than the 'width' property, so it will behave a little differently.</p>
                   <ul class="demo-nav inline" data-target="#example1">
-                    <li><span data-toggle=""></span></li>
-                    <li><span data-toggle=""></span></li>
-                    <li><span data-toggle=""></span></li>
+                    <li><span data-toggle="size2">size2</span></li>
+                    <li><span class="active" data-toggle="size4">size4</span></li>
+                    <li><span data-toggle="size6">size6</span></li>
+                    <li><span data-toggle="size8">size8</span></li>
                   </ul>
                 </div>
-                <div id="example2" data-demo class="item md8">
-                  <h2>Lorem ipsum.</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione minus maiores sapiente, ipsa suscipit dolor recusandae doloremque dignissimos dolorem in.</p>
+                <div id="example2" data-demo class="item md4">
+                  <h2>Screen Sizes:</h2>
+                  <p>Prefix the item size with the media query breakpoint and to specify a width for the minimum screen size.</p>
                   <ul class="demo-nav inline" data-target="#example2">
-                    <li><span data-toggle=""></span></li>
-                    <li><span data-toggle=""></span></li>
-                    <li><span data-toggle=""></span></li>
+                    <li><span data-toggle="md2">md2</span></li>
+                    <li><span class="active" data-toggle="md4">md4</span></li>
+                    <li><span data-toggle="md6">md6</span></li>
+                    <li><span data-toggle="md8">md8</span></li>
                   </ul>
                 </div>
                 <div id="example3" data-demo class="item">
-                  <h2>Lorem ipsum.</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam tempora, quaerat animi eius, voluptates eum pariatur. Id illo debitis quod!</p>
+                  <h2>Order:</h2>
+                  <p>Add classes of 'first' and 'last' to change the order, or 'first-md' etc. to apply on minimum screen size.</p>
                   <ul class="demo-nav inline" data-target="#example3">
-                    <li><span data-toggle=""></span></li>
-                    <li><span data-toggle=""></span></li>
-                    <li><span data-toggle=""></span></li>
+                    <li><span data-toggle="first">first</span></li>
+                    <li><span data-toggle="last">last</span></li>
+                    
                   </ul>
                 </div>
-              </div>             
+              </div>
+
           </section>       
       </section>
+      <div class="pad contained">
+        <h3>Alignment Classes</h3>
+        <p>These Flexbox properties affect the alignment of items that don't fill the whole space. They will behave differently dependening on the 'flex-direction'</p>
+      </div>   
       <section class="demo-container contained col row-md">       
-          <nav class="item md3">
-            <h3>Alignment Classes</h3>
-            <p>These Flexbox properties affect the alignment of items that don't fill the whole space. They will behave differently dependening on the 'flex-direction'</p>
+          <nav class="item md3">            
             <ul class="nav demo-nav" data-target="#flex-example2">  
               <li class="h4">Justify Content</li>
               <li><span href="#" data-toggle="just-start">flex-start* <i>class: just-start</i></span></li>
               <li><span href="#" data-toggle="just-end">flex-end <i>class: just-end</i></span></li>
-              <li><span href="#" data-toggle="just-center">center <i>class: just-center</i></span></li>
+              <li><span href="#" class="active" data-toggle="just-center">center <i>class: just-center</i></span></li>
               <li><span href="#" data-toggle="just-around">space-around <i>class: just-around</i></span></li>
               <li><span href="#" data-toggle="just-between">space-between <i>class: just-between</i></span></li>
               <li><span href="#" data-toggle="just-evenly">space-evenly <i>class: just-evenly</i></span></li>
@@ -161,27 +170,36 @@
               <li class="h4">Align Items</li>
               <li><span href="#" data-toggle="items-start">flex-start <i>class: items-start</i></span></li>
               <li><span href="#" data-toggle="items-end">flex-end <i>class: items-end</i></span></li>
-              <li><span href="#" data-toggle="items-center">center <i>class: items-center</i></span></li>
+              <li><span href="#" class="active" data-toggle="items-center">center <i>class: items-center</i></span></li>
               <li><span href="#" data-toggle="items-baseline">baseline <i>class: items-baseline</i></span></li>
               <li><span href="#" data-toggle="items-stretch">stretch* <i>class: items-stretch</i></span></li>
             </ul>
-            
-            <ul class="nav demo-nav" data-target="#flex-example">
+            <ul class="nav demo-nav" data-target="#flex-example2">  
               <li class="h4">Flex Direction</li>
-              <li><span class="active" href="#" data-toggle="row">row* <i>class: row</i></span></li>
-              <li><span href="#" data-toggle="col">column <i>class: col</i></span></li>
+              <li><span class="active" href="#" data-toggle="row">Row</span></li>
+              <li><span href="#" data-toggle="col">Column</span></li>
             </ul>
+            
+             
           </nav>
           <section class="item noshrink-md md9">
-              <div id="flex-example2" data-demo class="row">
-                
-              </div>             
+              <div id="flex-example2" data-demo class="row just-center items-center">
+                <div class="demo-box text-center">1</div>
+                <div class="demo-box text-center">2</div>
+                <div class="demo-box text-center">3</div>
+                <div class="demo-box text-center">4</div>
+                <div class="demo-box text-center">5</div>
+              </div> 
           </section>       
       </section>
+      <div class="pad contained">
+        <h3>Multi Line Alignment</h3>
+        <p>These Flexbox properties affect the alignment of wrapped items only.</p>
+      </div> 
       <section class="demo-container contained col row-md">       
           <nav class="item md3">
-            <h3>Multi Line Alignment</h3>
-            <p>These Flexbox properties affect the alignment of wrapped items only.</p>
+            
+            
             <ul class="nav demo-nav" data-target="#flex-example3">  
               <li class="h4">Align Content</li>
               <li><span href="#" data-toggle="content-start">flex-start <i>class: content-start</i></span></li>
@@ -189,12 +207,37 @@
               <li><span href="#" data-toggle="content-center">center <i>class: content-center</i></span></li>
               <li><span href="#" data-toggle="content-around">space-around <i>class: content-around</i></span></li>
               <li><span href="#" data-toggle="content-between">space-between <i>class: content-between</i></span></li>
-              <li><span href="#" data-toggle="content-stretch">stretch* <i>class: content-stretch</i></span></li>
+              <li><span href="#" class="active" data-toggle="content-stretch">stretch* <i>class: content-stretch</i></span></li>
+            </ul>
+            <ul class="nav demo-nav" data-target="#flex-example3">  
+              <li class="h4">Flex Direction</li>
+              <li><span class="active" href="#" data-toggle="row">Row</span></li>
+              <li><span href="#" data-toggle="col">Column</span></li>
             </ul>
           </nav>
           <section class="item noshrink-md md9">
-              <div id="flex-example3" data-demo class="row">
-                
+              <div id="flex-example3" data-demo class="row wrap">
+                <div class="item demo-box text-center size4">
+                  <p>1</p>
+                </div>
+                <div class="item  demo-box text-center size6">
+                  <p>2</p>
+                </div>
+                <div class="item demo-box text-center size3">
+                  <p>3</p>
+                </div>
+                <div class="item demo-box text-center size3">
+                  <p>4</p>
+                </div>
+                <div class="item demo-box text-center size6">
+                  <p>5</p>
+                </div>
+                <div class="item demo-box text-center size2">
+                  <p>6</p>
+                </div>
+                <div class="item demo-box text-center size4">
+                  <p>7</p>
+                </div>
               </div>             
           </section>  
       </section>    

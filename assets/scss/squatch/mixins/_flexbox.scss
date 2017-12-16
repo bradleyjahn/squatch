@@ -40,10 +40,10 @@
 
 @mixin flex-item($class) {
 	//flex-grow: <number>; /* default 0 */   flex-shrink: <number>; /* default 1 */
-  .grow#{$class} {flex-grow: 1;}
-  .nogrow#{$class} {flex-grow: 0;}
-  .shrink#{$class} {flex-shrink: 1;}
-  .noshrink#{$class} {flex-shrink: 0;}
+  .grow#{$class} {flex-grow: 1 !important;;}
+  .nogrow#{$class} {flex-grow: 0 !important;}
+  .shrink#{$class} {flex-shrink: 1 !important;}
+  .noshrink#{$class} {flex-shrink: 0 !important;}
 
   //align-self: auto | flex-start | flex-end | center | baseline | stretch;
   .self-start#{$class} { align-self: flex-start; }
@@ -61,8 +61,7 @@
 @mixin flex-grid($class,$columns) {
   @for $i from 1 through $columns {
 	.item.#{$class}#{$i} {
-      flex-basis: percentage(($i / $columns));
-      //flex-grow: 0;
+      flex: 1 0 percentage(($i / $columns));
     }
   }
 }
