@@ -17,7 +17,7 @@
     <![endif]-->
 
 	  <header class="header-container">
-	    <div class="contained pad">
+	    <div class="contained pad-h">
         <nav class="navbar">
           <a href="#" class="brand"><img src="./img/squatch.svg" alt="logo" />Squatch</h1></a>
 	        <button class="navbar-toggle" data-toggle="open" data-target=".navbar">
@@ -26,7 +26,7 @@
           <ul class="nav">
               <li><a href="#">Learn</a></li>
               <li><a href="https://github.com/thesquatchman/squatch-sass" target="_blank">Github</a></li>
-              <li class="dropdown"><a href="#">Components</a><a class="dropdown-toggle" data-toggle="open"><i class="carat"></i></a>
+              <li class="dropdown"><a href="#usingScss">Docs</a><a class="dropdown-toggle" data-toggle="open"><i class="carat"></i></a>
               	<ul class="dropdown-nav">
                 	<li class=""><a href="#grids">Flexbox Grid</a></li>
                 	<li class=""><a href="#usingScss">Using SCSS</a></li>
@@ -77,12 +77,65 @@
           	  <p>With our flexible and intuitive sass files, we put the design decisions back on the developers and designers where they belong.</p>
 						</section>
           </div><!-- row -->
-          <footer>
-            <p class="text-center"><a href="#">Learn more about customizing with Sass >></a></p>
-          </footer>
         </article>   
       </div> <!-- row -->
 	  </section> <!-- #main-container -->
+    <section id="usingScss">
+      <div class="flex contained">
+        <div class="item">
+          <h2>Using the Sass files:</h2>
+          <p>Squatch uses sass maps to make customization much faster:</p>          
+          <section class="col row-md">
+            <div class="item md6">
+              <h3>Colors</h3>
+              <p>Edit the '$colors' variable and you'll get a bunch of helpful classes for text and background colors. Add or remove as many as you need and call them anything you like:</p>
+              <code>$colors: (<br>
+                  &nbsp;grey: #2C3E50,<br>
+                  &nbsp;red: #E74C3C,<br>
+                  &nbsp;off-white: #ECF0F1,<br>
+                  &nbsp;light-blue: #3498DB,<br>
+                  &nbsp;blue: #2980B9<br>
+                );</code>
+                <p>In the sass files you can use the 'color' function to get your shade: </p> 
+              <code>.myClass { <br>
+                &nbsp;background: color(off-white);<br>
+              }</code> 
+            </div>
+            <div class="item md6">
+              <h3>&nbsp;</h3>
+              <p>Squatch will auto-generate text color and background classes from all the colors in you map:</p>
+              <p class="text-blue">This paragraph has a class of .text-blue</p>
+              <p><span class="bg-blue">This span has a class of .bg-blue</span></p> 
+              <p class="text-red">This paragraph has a class of .text-red</p>
+              <p><span class="bg-red">This span has a class of .bg-red</span></p>
+            </div>
+          </section>
+                   
+          <section class="col row-md">
+            <div class="item md6">
+              <h3>Responsive Breakpoints</h3>
+              <p>Edit the '$breakpoints' variable and squatch will re-generate all the media queries for flexbox grid, utilities like hidden classes, etc:</p>
+              <code>$breakpoint-unit: 'px';<br>
+                    $breakpoints: (<br>
+                      &nbsp;sm : 480,<br>
+                      &nbsp;md : 768,<br>
+                      &nbsp;lg : 1024,<br>
+                    );<br>
+                    $breakpoint-navbar: 768 !default;</code>
+            </div>
+            <div class="item md6">
+              <h3>&nbsp;</h3>
+              <p>With these default values, use the class 'hidden-min' or 'hidden-max' appended by any of your breakpoint keys:</p>
+                <code>&lt;button class="btn hidden-min-md" &gt;<br>&nbsp;Click to call!<br>&lt;/button&gt;</code>
+              <p>This element will be set to 'display: none' on screens with a minimun width of 768px</p>  
+            </div>
+          </section>
+          
+             
+        </div>
+      </div>  
+      
+    </section>
 		<section id="grids">
 			<div class="flex contained">
 				<div class="item">
@@ -90,7 +143,7 @@
 					<p>Flexbox grid system makes designing responsive layouts a breeze. Float based grids are no longer needed. Autoprefixer will take care of the differences in modern browsers. IE 9 and below are dead to us. Go ahead and click the examples below to play with different layouts you can create just by adding classes to a containing element and child elements: </p>
 				</div>
 			</div>
-      <div class="pad contained">
+      <div class="pad-h contained">
         <h3>Layout Classes</h3>
         <p>Apply these flexbox properties to container elements by adding the class in gray: (* browser default)</p>
       </div>      
@@ -151,7 +204,7 @@
 
           </section>       
       </section>
-      <div class="pad contained">
+      <div class="pad-h contained">
         <h3>Alignment Classes</h3>
         <p>These Flexbox properties affect the alignment of items that don't fill the whole space. They will behave differently dependening on the 'flex-direction'</p>
       </div>   
@@ -192,7 +245,7 @@
               </div> 
           </section>       
       </section>
-      <div class="pad contained">
+      <div class="pad-h contained">
         <h3>Multi Line Alignment</h3>
         <p>These Flexbox properties affect the alignment of wrapped items only.</p>
       </div> 
@@ -240,31 +293,46 @@
                 </div>
               </div>             
           </section>  
-      </section>    
+      </section> 
+      <section class="pad-h contained">
+        <h3>Rethinking Responsive Layouts</h3>
+        <p>Every Flexbox class has media queries for each of your set breakpoints (ie 'row', 'row-sm', 'row-md'). Let's say you want to create a two column layout with a main content area and a sidebar. The sidebar should display below the content up to a medium sized screen, then it needs to be to the left of the content. Here's what the html might look like:</p>
+        <code>
+          &lt;header&gt;...&lt;/header&gt;<br>
+          &nbsp;&nbsp;&lt;div id="wrapper" class="col row-md"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;article class="item md8"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;...article content...<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/article&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;aside class="item first-md"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;...sidebar content...<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/aside&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &lt;footer&gt;...&lt;/footer&gt;<br>
+
+        </code>
+        <br><br>
+        
+          <section>
+            <header class="bg-gray0 pad"><p>header</p></header>
+            <div id="wrapper" class="col row-md">
+            <article class="item md8 bg-blue">
+            <p>&nbsp;</p>
+            <p>...article content...</p>
+            <p>&nbsp;</p>
+            </article>
+            <aside class="item first-md bg-grey">
+            <p>&nbsp;</p>
+            <p>...sidebar content...</p>
+            <p>&nbsp;</p>
+            </aside>
+            </div>
+            <footer class="bg-gray0 pad"><p>footer</p></footer>
+            </section>
+
+      </section>   
 			
 		</section>
-    <section id="usingScss">
-      <div class="flex contained">
-        <div class="item">
-          <h2>Using the Sass files:</h2>
-          <p>Squatch uses sass maps to make customization much faster, change the '$breakpoints' variable, flexbox grid & helper functions will be generated:</p>
-          <code></code>
-          <p>Edit the '$colors' variable and you'll get a bunch of helpful classes for text and background colors. Add or remove as many as you need and call them anything you like:</p>
-          <code>$colors: (<br>
-                  &nbsp;grey: #2C3E50,<br>
-                  &nbsp;red: #E74C3C,<br>
-                  &nbsp;off-white: #ECF0F1,<br>
-                  &nbsp;light-blue: #3498DB,<br>
-                  &nbsp;blue: #2980B9<br>
-                );</code>
-          <p>In the sass files you can use the 'color' function to get your shade: </p> 
-          <code>.myClass { <br>
-            &nbsp;background: color(off-white);<br>
-          }</code>     
-        </div>
-      </div>  
-      
-    </section>
+    
     <section id="javascript">
       <div class="flex contained">
         <div class="item">

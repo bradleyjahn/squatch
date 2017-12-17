@@ -1,0 +1,20 @@
+
+@mixin generate-color-classes($color,$contrast: false) {
+  .text-#{$color} { color: color($color); }
+  .bg-#{$color} { 
+  	background-color: color($color);
+  	@if $contrast {
+  		color: #{$contrast};
+  	}
+  }
+}
+
+@mixin generate-gray-classes($color,$contrast: false) {
+  .text-gray#{$color} { color: gray($color); }
+  .bg-gray#{$color} { 
+  	background-color: gray($color);
+  	@if $contrast {
+  		color: #{$contrast};
+  	}
+  }
+}

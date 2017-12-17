@@ -1,0 +1,16 @@
+
+@each $color, $value in $colors {
+	$contrast: false; 
+	@if brightness($value) < 65% {
+    $contrast: #ffffff;
+  } 
+  @include generate-color-classes($color,$contrast);
+}
+
+@each $num, $value in $gray {
+	$contrast: false; 
+	@if brightness($value) < 65% {
+    $contrast: #ffffff;
+  } 
+  @include generate-gray-classes($num,$contrast);
+}
