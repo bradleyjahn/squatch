@@ -19,6 +19,9 @@ $(document).ready(function(){
 				})
 				clicked.addClass('active');
 				$(elToToggle).removeClass(classes).addClass(classToToggle);
+			} else if (classToToggle.indexOf('#') >= 0) {	
+			  clicked.siblings().removeClass('active');			
+				$(classToToggle).addClass('active').siblings().removeClass('active');
 			} else {
 				$(this).closest('li').toggleClass(classToToggle);
 			}

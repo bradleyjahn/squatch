@@ -339,14 +339,17 @@
           <h2>One Javascript Function...</h2>
           <p>...to rule them all, one function to .find() them , and in the DOM to .bind() them...(so so sorry)</p>
           <p>Only one jQuery function comes with Squatch, but it is an extremely useful one. We assume you will import other libraries for adding fanciness to your site so Squatch stays out of the way. Here's how all the functionality on this demo page was done using only <b>data-toggle=""</b> and <b>data-target=""</b> in the html:</p>
+          <h3>Example #1</h3>
+          <p>Add the attributes to a button, anchor tag, span or whatever:. The value of <b>data-toggle=""</b> gets added or removed as a class from the element in the <b>data-target=""</b>. The button gets a class of 'active' toggled on or off.</p>
           <section class="col row-md">
             <div class="item">
-              <p>Add the attributes to a button, anchor tag, span or whatever:</p>
-          <code>&lt;button class="btn" data-toggle="open" data-target="#blue-box"&gt;<br>&nbsp;open dialog<br>&lt;/button&gt;</code>
-          <p>The value of <b>data-toggle=""</b> gets added or removed as a class from the element in the <b>data-target=""</b>. The button gets a class of 'active' toggled on or off.</p>
-          <code>&lt;div id="blue-box" class=""&gt;<br>
-           &nbsp; &lt;p&gt;hi there!&lt;/p&gt;<br>
-          &lt;/div&gt;</code>
+              
+              <code>
+                &lt;button class="btn" data-toggle="open" data-target="#blue-box"&gt;<br>&nbsp;open dialog<br>&lt;/button&gt;<br>
+                &lt;div id="blue-box" class=""&gt;<br>
+                &nbsp; &lt;p&gt;hi there!&lt;/p&gt;<br>
+                &lt;/div&gt;
+              </code>
             </div>
             <div class="item md6">
               <button class="btn" data-toggle="open" data-target="#blue-box">open dialog</button>
@@ -355,10 +358,91 @@
               </div>
             </div>
           </section>
-
+          
+          <h3>Example #2</h3>
           <p>Leave out the <b>data-target</b> and the parent <b>li</b> will be the target, useful for dropdown menus.</p>
+          <section class="col row-md">
+            <div class="item">
+              <code>
+              &lt;nav class="navbar"&gt;<br>
+              &nbsp;&lt;ul class="nav"&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;&lt;a href="#" data-toggle="open">DropDown&lt;/a&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;ul class="dropdown-nav"&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Example1&lt;/a&gt;&lt;/li&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Example2&lt;/a&gt;&lt;/li&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Example3&lt;/a&gt;&lt;/li&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+              &nbsp;&nbsp;&lt;/li&gt;<br>
+              &nbsp;&lt;/ul&gt;<br>
+              &lt;/nav&gt;
+              </code>
+            </div>
+            <div class="item md6">
+              <nav class="navbar">
+               <ul class="nav">
+                  <li><a href="#" data-toggle="open">DropDown</a>
+                    <ul class="dropdown-nav">
+                      <li><a>Example1</a></li>
+                      <li><a>Example2</a></li>
+                      <li><a>Example3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+          
+          <h3>Example #3</h3>
           <p>If you put the <b>data-target</b> on the parent ul, then the values from sibling child elements will be removed with the toggle.</p>
           
+
+          <h3>Example #4</h3>
+          <p>Put an id selector in the <b>data-toggle</b> and leave off the <b>data-target</b>, and it will toggle a class of 'active' on the corresponding element while removing the 'active' class from it's siblings. Useful for Tabs:</p>
+          <section class="col row-md">
+            <div class="item">
+              <code>
+                &lt;nav&gt;<br>
+                &nbsp;&lt;ul class="nav inline"&gt;<br>
+                &nbsp;&nbsp;&lt;li data-toggle="#tab1" class="active"&gt;Tab 1&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li data-toggle="#tab2" class=""&gt;Tab 2&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li data-toggle="#tab3" class=""&gt;Tab 3&lt;/li&gt;<br>
+                &nbsp;&lt;/ul&gt;<br>
+                &lt;/nav&gt;<br><br>
+                &lt;section class="tabs"&gt;<br>
+                &nbsp;&lt;div id="tab1" class="tab active"&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;...&lt;/p&gt;<br>
+                &nbsp;&lt;/div&gt;<br>
+                &nbsp;&lt;div id="tab2" class="tab"&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;...&lt;/p&gt;<br>
+                &nbsp;&lt;/div&gt;<br>
+                &nbsp;&lt;div id="tab3" class="tab"&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;...&lt;/p&gt;<br>
+                &nbsp;&lt;/div&gt;<br>
+                &lt;/section&gt;
+              </code>
+            </div>
+            <div class="item md6">
+                <nav>
+                  <ul class="nav inline">
+                    <li data-toggle="#tab1" class="active">Tab 1</li>
+                    <li data-toggle="#tab2" class="">Tab 2</li>
+                    <li data-toggle="#tab3" class="">Tab 3</li>
+                  </ul>
+                </nav>
+                <section class="tabs">
+                  <div id="tab1" class="tab active">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum voluptatum exercitationem, delectus doloremque tempore officia pariatur esse ex quaerat soluta!</p>
+                  </div>
+                  <div id="tab2" class="tab">
+                    <p>Odio maiores nobis amet sequi distinctio atque, id possimus rerum voluptate et, porro voluptatem blanditiis! Cupiditate libero temporibus cumque dignissimos!</p>
+                  </div>
+                  <div id="tab3" class="tab">
+                    <p>Nemo dicta a esse quos eligendi, expedita facilis, ipsa odit, quisquam sunt veniam. Porro accusamus, quod magnam. Magni, repudiandae, hic.</p>
+                  </div>
+                </section>
+            </div>
+          </section>
+
         </div>
       </div>  
       
