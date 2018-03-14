@@ -13,7 +13,7 @@
     "gulp-uglify": "^3.0.0"
   },
   "description": "a declarative css framework with flexbox designed for smallish websites",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "scripts/squatch.js",
   "style": [
     "./dist/squatch.css"
