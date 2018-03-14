@@ -42,9 +42,9 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function() {
     return gulp.src(jsFiles)
-        .pipe(concat('squatch.js'))
+        .pipe(concat('jquery.squatch.js'))
         .pipe(gulp.dest(jsDest))
-        .pipe(rename('squatch.min.js'))
+        .pipe(rename('jquery.squatch.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(jsDest))
         .pipe(gulp.dest(jsDocsOutput));

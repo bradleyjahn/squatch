@@ -1,7 +1,7 @@
 {
   "name": "squatch",
-  "dependencies": {
-    "jquery": "^3.3.1"
+  "peerDependencies": {
+    "jquery": "1.9.1 - 3"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -14,7 +14,10 @@
   },
   "description": "a declarative css framework with flexbox designed for smallish websites",
   "version": "1.0.0",
-  "main": "gulpfile.js",
+  "main": "scripts/squatch.js",
+  "style": [
+    "./dist/squatch.css"
+  ],
   "directories": {
     "doc": "docs"
   },

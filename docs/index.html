@@ -43,7 +43,7 @@
 				<div class="item lg5">
 					<h1>Squatch Framework</h1>
 					<p class="display3">The missing link in css frameworks. Everything you need, nothing more.</p>
-					<p class="display3"><a href="https://github.com/thesquatchman/squatch-sass/archive/master.zip" class="btn text-center" rel="nofollow" title="Download the contents of bradleyjahn/squatch as a zip file" aria-label="Download the contents of bradleyjahn/squatch as a zip file" >Download Squatch</a></p>
+					<p class="display3"><a href="https://github.com/thesquatchman/squatch-sass/archive/master.zip" class="btn text-center" rel="nofollow" title="Download the contents of squatch as a zip file" aria-label="Download the contents of squatch as a zip file" >Download Squatch</a></p>
           
 				</div>
         <div class="item lg7">
@@ -464,6 +464,12 @@
 	
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	  <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-	  <script src="./js/squatch.min.js"></script>
+	  <!-- <script src="./js/squatch.min.js"></script> -->
+    <script src="./js/jquery.squatch.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $( '[data-toggle]' ).squatch();
+        });
+    </script>
   </body>
 </html>
