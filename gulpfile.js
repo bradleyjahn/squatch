@@ -6,12 +6,12 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 
-var input = './assets/scss/**/*.scss';
-var output = './src/css';
+var input = './stylesheets/**/*.scss';
+var output = './dist';
 var docsOutput = './docs/css';
 
-var jsFiles = 'assets/js/**/*.js',
-    jsDest = './src/js';
+var jsFiles = './scripts/**/*.js',
+    jsDest = './dist';
     jsDocsOutput = './docs/js';
 
 

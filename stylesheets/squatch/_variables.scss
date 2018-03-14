@@ -9,7 +9,7 @@ $colors: (
 	off-white: #ECF0F1,
 	light-blue: #3498DB,
 	blue: #2980B9
-	);
+	) !default;
 $gray: (
 	20: #000000,
 	19: #080808,
@@ -31,7 +31,7 @@ $gray: (
 	2: #E8E8E8,
 	1: #F8F8F8,
 	0: #FFFFFF
-);
+) !default;
 
 
 

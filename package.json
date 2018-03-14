@@ -1,6 +1,8 @@
 {
   "name": "squatch",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -8,6 +10,29 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
-  }
+    "gulp-uglify": "^3.0.0"
+  },
+  "description": "a declarative css framework with flexbox designed for smallish websites",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesquatchman/squatch-sass.git"
+  },
+  "keywords": [
+    "sass",
+    "flexbox"
+  ],
+  "author": "brad jahn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thesquatchman/squatch-sass/issues"
+  },
+  "homepage": "http://squatch.co"
 }
