@@ -1,0 +1,93 @@
+@import 'squatch/functions';
+@import 'squatch/variables';
+
+.hero-container {
+	background: lighten(color(grey), 15%);
+	padding: 6em 0 5em;
+	color: #fff;
+	* {
+		color: #fff;
+	}
+}
+
+[data-demo] {
+	position: relative;
+	&::before {
+		content: 'class="' attr(class) '"';
+		position: absolute;
+		top: 0;
+		left: 1rem;
+		font-family: $font-alt;
+		opacity: 0.5;
+	}
+}
+
+.demo-nav {
+	li {
+		display: block;
+		padding: 0;
+		cursor: pointer;
+		span {
+			display: block;
+			padding: 0.5rem 1rem;
+			i {
+				opacity: 0.5;
+				float: right;
+				font-family: $font-alt;
+			}
+			&.active {
+				background: $accent-primary;
+				color: white;
+			}
+		}
+	}
+	&.inline {
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+#flex-example,
+#flex-example2,
+#flex-example3 {
+	background: white;
+	padding: 3rem 1rem 1rem;
+	margin: 1rem 0;
+	overflow: hidden;
+}
+#flex-example2 {
+	height: 100%;
+	min-height: 30rem;
+	&.col {
+		min-height: 60rem;
+	}
+}
+#flex-example3 {
+	height: 60rem;
+}
+.demo-box {
+	background-color: color(blue);
+	border: 5px solid white;
+	padding: 3rem;
+	color: white;
+}
+#example1 {
+	background-color: gray(3);
+}
+#example2 {
+	background-color: gray(5);
+}
+#example3 {
+	background-color: gray(1);
+}
+
+#blue-box {
+	display: none;
+	border: 1px solid color(blue);
+	padding: 1rem;
+	margin: 1rem 0;
+	&.open {
+		display: block;
+	}
+}
